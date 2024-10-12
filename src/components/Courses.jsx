@@ -2,6 +2,7 @@ import React from 'react'
 import { Card } from 'antd';
 import { Button } from 'antd';
 import coursesData from '../data/coursesData';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
     return (
@@ -23,12 +24,14 @@ const Courses = () => {
                         <div className='mt-2 text-[16px] leading-8'>
                             {course.description}
                         </div>
-                        <Button
-                            className='mt-2 w-[100%] py-6 bg-[#2B308B] text-[20px] font-semibold'
-                            type="primary"
-                        >
-                            Bắt đầu học
-                        </Button>
+                        <Link to='/free-resources/main-vocab'>
+                            <Button
+                                className='mt-2 w-[100%] py-6 bg-[#2B308B] text-[20px] font-semibold'
+                                type="primary"
+                            >
+                                Bắt đầu học
+                            </Button>
+                        </Link>
                     </div>
                 </Card>
             ))}
