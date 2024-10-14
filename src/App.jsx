@@ -18,8 +18,10 @@ import SettingsPage from './pages/SettingsPage'
 import LearnedResourcesPage from './pages/FreeResources/LearnedResourcesPage'
 import FilterFreeResourcesPage from './pages/FreeResources/FilterFreeResourcesPage'
 import SavedAccountPage from './pages/AccountManagement/SavedAccountPage'
-import MyResourcesPage from './pages/AccountManagement/MyResourcesPage'
-import SchedulerAccountPage from './pages/AccountManagement/SchedulerAccountPage'
+import MyResourcesPage from './pages/AccountManagement/MyResources/MyResourcesPage'
+import LearnedAccountPage from './pages/AccountManagement/MyResources/LearnedResourcesPage'
+import TodaySchedulerPage from './pages/AccountManagement/MyScheduler/TodaySchedulerPage'
+import MonthSchedulerPage from './pages/AccountManagement/MyScheduler/MonthSchedulerPage'
 
 function App() {
   return (
@@ -64,8 +66,11 @@ function App() {
         {/* Trang quản lý tài khoản */}
         <Route path='/account' element={<MainLayout><AccountPage /></MainLayout>} />
         <Route path='/account/saved' element={<MainLayout><SavedAccountPage /></MainLayout>} />
-        <Route path='/account/scheduler' element={<MainLayout><SchedulerAccountPage /></MainLayout>} />
+        <Route path='/account/scheduler' element={<MainLayout><TodaySchedulerPage /></MainLayout>} />
+        <Route path='/account/scheduler/month' element={<MainLayout><MonthSchedulerPage /></MainLayout>} />
         <Route path='/account/my-resources' element={<MainLayout><MyResourcesPage /></MainLayout>} />
+        <Route path='/account/my-resources/learned' element={<MainLayout><LearnedAccountPage /></MainLayout>} />
+        <Route path='/account/my-resources/filter' element={<MainLayout><MyResourcesPage /></MainLayout>} />
         <Route path='/account/my-tests' element={<MainLayout><MyResourcesPage /></MainLayout>} />
 
         {/* Trang cài đặt */}
