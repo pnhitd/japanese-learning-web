@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Courses from '../components/Courses';
+import Courses from '../../components/Courses';
 import { Carousel } from 'antd';
-import c1 from '../assets/carouselImgs/c1.png'
-import c2 from '../assets/carouselImgs/c2.png'
-import Comments from '../components/Comments';
+import c1 from '../../assets/carouselImgs/c1.png'
+import c2 from '../../assets/carouselImgs/c2.png'
+import Comments from '../../components/Comments';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { CiFilter } from "react-icons/ci";

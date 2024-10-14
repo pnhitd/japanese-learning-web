@@ -8,17 +8,24 @@ import SearchingPage from './pages/SearchingPage'
 import ChattingPage from './pages/ChattingPage'
 import HomePage from './pages/HomePage'
 import FreeDocumentPage from './pages/FreeResources/FreeResourcesPage'
-import PaidDocumentPage from './pages/PaidResourcesPage'
+import PaidDocumentPage from './pages/PaidResources/PaidResourcesPage'
 import OnlineCoursesPage from './pages/OnlineCoursesPage'
 import BlogPage from './pages/BlogPage'
-import AccountPage from './pages/AccountPage'
+import AccountPage from './pages/AccountManagement/AccountPage'
 import MainVocabPage from './pages/FreeResources/MainVocabPage'
 import MainGrammarPage from './pages/FreeResources/MainGrammarPage'
+import SettingsPage from './pages/SettingsPage'
+import LearnedResourcesPage from './pages/FreeResources/LearnedResourcesPage'
+import FilterFreeResourcesPage from './pages/FreeResources/FilterFreeResourcesPage'
+import SavedAccountPage from './pages/AccountManagement/SavedAccountPage'
+import MyResourcesPage from './pages/AccountManagement/MyResourcesPage'
+import SchedulerAccountPage from './pages/AccountManagement/SchedulerAccountPage'
 
 function App() {
   return (
     <>
       <Routes>
+
         {/* Trang chủ */}
         <Route path='/' element={<MainLayout><HomePage /></MainLayout>} />
 
@@ -34,7 +41,9 @@ function App() {
 
         {/* Trang tài liệu miễn phí */}
         <Route path='/free-resources' element={<MainLayout><FreeDocumentPage /></MainLayout>} />
-        <Route path='/free-resources/main-vocab' element={<MainLayout><MainVocabPage /></MainLayout>}  />
+        <Route path='/free-resources/learned' element={<MainLayout><LearnedResourcesPage /></MainLayout>} />
+        <Route path='/free-resources/filter' element={<MainLayout><FilterFreeResourcesPage /></MainLayout>} />
+        <Route path='/free-resources/main-vocab' element={<MainLayout><MainVocabPage /></MainLayout>} />
         <Route path='/free-resources/main-grammar' element={<MainLayout><MainGrammarPage /></MainLayout>} />
         <Route path='/free-resources/main-listening' element={<MainLayout><MainGrammarPage /></MainLayout>} />
         <Route path='/free-resources/main-reading' element={<MainLayout><MainGrammarPage /></MainLayout>} />
@@ -54,8 +63,16 @@ function App() {
 
         {/* Trang quản lý tài khoản */}
         <Route path='/account' element={<MainLayout><AccountPage /></MainLayout>} />
+        <Route path='/account/saved' element={<MainLayout><SavedAccountPage /></MainLayout>} />
+        <Route path='/account/scheduler' element={<MainLayout><SchedulerAccountPage /></MainLayout>} />
+        <Route path='/account/my-resources' element={<MainLayout><MyResourcesPage /></MainLayout>} />
+        <Route path='/account/my-tests' element={<MainLayout><MyResourcesPage /></MainLayout>} />
+
+        {/* Trang cài đặt */}
+        <Route path='/setting' element={<MainLayout><SettingsPage /></MainLayout>} />
 
         <Route path='*' element='Home Page' />
+
       </Routes>
     </>
   )

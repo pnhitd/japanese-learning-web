@@ -18,7 +18,7 @@ const contentStyle = {
   borderRadius: '10px'
 };
 
-const FreeDocumentPage = () => {
+const LearnedResourcesPage = () => {
   const [size, setSize] = useState('large');
 
   return (
@@ -34,12 +34,12 @@ const FreeDocumentPage = () => {
 
       <div className='mx-10 mt-6'>
         <Link to='/free-resources'>
-          <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
+          <Button className='text-[16x]' shape="round" size={size}>
             Tất cả khóa học
           </Button>
         </Link>
         <Link to='/free-resources/learned'>
-          <Button className='ml-2 text-[16px]' shape="round" size={size}>
+          <Button className='ml-2 text-[16px] font-semibold'  type="primary" shape="round" size={size}>
             Khóa học đã mua
           </Button>
         </Link>
@@ -68,4 +68,4 @@ const FreeDocumentPage = () => {
   )
 }
 
-export default FreeDocumentPage
+export default LearnedResourcesPage

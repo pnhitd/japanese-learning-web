@@ -18,7 +18,7 @@ const MainKanjiPage = () => {
           </Link>
           <img className='float-left mr-4' src={vocab1} alt="" />
           <div className='leading-6'>
-            <h1 className='font-bold text-3xl'>Từ vựng</h1>
+            <h1 className='font-bold text-3xl'>Kanji</h1>
             <p className='mt-2 '>
               Với phần phát âm, tốt nhất bạn nên chuẩn hoá ngay từ đầu, đừng bỏ qua vì nó khó hay nghĩ nó không quan trọng. Càng để lâu hay học lên cao bạn CỰC KÌ khó sửa đổi.
               Vì……
