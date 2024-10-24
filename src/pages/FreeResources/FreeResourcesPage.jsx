@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Courses from '../../components/Courses';
-import { Carousel } from 'antd';
 import c1 from '../../assets/carouselImgs/c1.png'
 import c2 from '../../assets/carouselImgs/c2.png'
 import Comments from '../../components/Comments';
-import { Button, Input } from 'antd';
+import { Carousel, Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { CiFilter } from "react-icons/ci";
-
+import { Link } from 'react-router-dom';
 
 const contentStyle = {
   height: '100%',
@@ -33,13 +32,19 @@ const FreeDocumentPage = () => {
       </Carousel>
 
       <div className='mx-10 mt-6'>
-        <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
-          Tất cả khóa học
-        </Button>
-        <Button className='ml-2 text-[16px]' shape="round" size={size}>
-          Khóa học đã mua
-        </Button>
-        <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
+        <Link to='/free-resources'>
+          <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
+            Tất cả khóa học
+          </Button>
+        </Link>
+        <Link to='/free-resources/learned'>
+          <Button className='ml-2 text-[16px]' shape="round" size={size}>
+            Khóa học đã mua
+          </Button>
+        </Link>
+        <Link to='/free-resources/filter'>
+          <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
+        </Link>
         <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
       </div>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { ShoppingCartOutlined, MessageOutlined, NotificationOutlined, DownOutlined, LogoutOutlined, UserOutlined } from '@ant-design/icons'
 import Avatar from '../assets/avatars/avatar.png'
 import { Dropdown, Space } from 'antd';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -14,7 +15,7 @@ const items = [
   },
   {
     key: '2',
-    icon: <UserOutlined />,
+    icon: <Link to='/account'><UserOutlined /></Link>,
     label: 'Profile',
   },
   {
@@ -39,7 +40,7 @@ const Header = () => {
           <a onClick={(e) => e.preventDefault()}>
             <Space>
               <img className='w-10 h-10' src={Avatar} alt="" />
-              <p className='my-auto mr-2 ml-4 font-medium'>Trần Nhật Trường</p>
+              <p className='my-auto mr-2 ml-2 font-medium'>Trần Nhật Trường</p>
               <DownOutlined />
             </Space>
           </a>

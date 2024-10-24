@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import Tests from '../../components/Tests'
-import { Carousel } from 'antd';
-import c1 from '../../assets/carouselImgs/c1.png'
-import c2 from '../../assets/carouselImgs/c2.png'
-import { SearchOutlined } from '@ant-design/icons';
-import { CiFilter } from "react-icons/ci";
+import Courses from '../../../components/Courses'
+import c1 from '../../../assets/carouselImgs/c1.png'
+import c2 from '../../../assets/carouselImgs/c2.png'
+import { Carousel, Button, Input } from 'antd';
 import { Link } from 'react-router-dom';
-import { Button, Input } from 'antd';
+import { CiFilter } from "react-icons/ci";
+import { SearchOutlined } from '@ant-design/icons';
+
 
 const contentStyle = {
   height: '100%',
@@ -17,7 +17,8 @@ const contentStyle = {
   borderRadius: '10px'
 };
 
-const MyTestsAccountPage = () => {
+
+const MyResourcesPage = () => {
   const [size, setSize] = useState('large');
 
   return (
@@ -32,37 +33,37 @@ const MyTestsAccountPage = () => {
       </Carousel>
 
       <div className='mx-10 mt-6'>
-        <Link to='/free-resources'>
-          <Button className='text-[16x]' shape="round" size={size}>
+        <Link to='/account/my-resources'>
+          <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
             Tất cả khóa học
           </Button>
         </Link>
-        <Link to='/free-resources/learned'>
+        <Link to='/account/my-resources/learned'>
           <Button className='ml-2 text-[16px]' shape="round" size={size}>
             Khóa học đã mua
           </Button>
         </Link>
-        <Link to='/free-resources/filter'>
-          <Button className='ml-2' shape="circle" type="primary" icon={<CiFilter className='text-[16px]' />} size={size} />
+        <Link to='/account/my-resources/filter'>
+          <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
         </Link>
         <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
       </div>
 
       <div className='text-center mb-10 mx-10'>
-        <h1 className='font-bold text-[55px]'>Các bài kiểm tra tổng hợp</h1>
+        <h1 className='font-bold text-[55px]'>Tài liệu của bạn</h1>
         <p className='text-[18px] leading-[25px] text-[#696E82]'>
-          Tất cả những bài kiểm tra tổng hợp mà bạn đã tham gia đều có mặt tại đây!
+          Tất cả những tài liệu và khóa học và bạn đã tham gia đều có mặt tại đây!
           <br />
-          Hãy thử sức lại với những bài mà bạn làm chưa tốt nhé!
+          Hãy hoàn thành nốt những bài mà bạn chưa làm nhé!
         </p>
       </div>
-
-      <div className='mx-10 mt-6'>
-        <Tests />
+      <div className='mx-10'>
+        <Courses />
       </div>
+
 
     </div>
   )
 }
 
-export default MyTestsAccountPage
+export default MyResourcesPage
