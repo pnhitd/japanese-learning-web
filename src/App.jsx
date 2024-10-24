@@ -10,7 +10,7 @@ import HomePage from './pages/HomePage';
 import FreeDocumentPage from './pages/FreeResources/FreeResourcesPage';
 import PaidDocumentPage from './pages/PaidResources/PaidResourcesPage';
 import OnlineCoursesPage from './pages/OnlineCoursesPage';
-import BlogPage from './pages/BlogPage';
+import MainBlogPage from './pages/Blogs/MainBlogPage';
 import AccountPage from './pages/AccountManagement/AccountPage';
 import MainVocabPage from './pages/FreeResources/MainVocabPage';
 import MainGrammarPage from './pages/FreeResources/MainGrammarPage';
@@ -23,6 +23,8 @@ import LearnedAccountPage from './pages/AccountManagement/MyResources/LearnedRes
 import TodaySchedulerPage from './pages/AccountManagement/MyScheduler/TodaySchedulerPage';
 import MonthSchedulerPage from './pages/AccountManagement/MyScheduler/MonthSchedulerPage';
 import MyTestsAccountPage from './pages/AccountManagement/MyTestsAccountPage';
+import ArticlesBlogPage from './pages/Blogs/ArticlesBlogPage';
+import DetailArticlePage from './pages/Blogs/DetailArticlePage';
 
 function App() {
 
@@ -34,7 +36,7 @@ function App() {
     { path: '/free-resources', element: <FreeDocumentPage /> },
     { path: '/paid-resources', element: <PaidDocumentPage /> },
     { path: '/online-courses', element: <OnlineCoursesPage /> },
-    { path: '/blog', element: <BlogPage /> },
+    { path: '/blog', element: <MainBlogPage /> },
     { path: '/chat', element: <ChattingPage /> },
     { path: '/setting', element: <SettingsPage /> },
   ];
@@ -59,6 +61,11 @@ function App() {
     { path: 'my-resources/learned', element: <LearnedAccountPage /> },
     { path: 'my-tests', element: <MyTestsAccountPage /> },
   ];
+
+  const blogsRoutes = [
+    { path: 'articles', element: <ArticlesBlogPage /> },
+    { path: 'detail', element: <DetailArticlePage /> }
+  ]
 
   return (
     <Routes>
@@ -99,9 +106,20 @@ function App() {
         <Route index element={<MainLayout><AccountPage /></MainLayout>} />
       </Route>
 
+      {/* Render các route con của Blogs */}
+      <Route path='/blog'>
+        {blogsRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={<MainLayout>{route.element}</MainLayout>}
+          />
+        ))}
+      </Route>
+
       {/* Trang 404 */}
       <Route path='*' element={<MainLayout><HomePage /></MainLayout>} />
-      
+
     </Routes>
   );
 }
