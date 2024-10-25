@@ -9,7 +9,7 @@ import ChattingPage from './pages/ChattingPage';
 import HomePage from './pages/HomePage';
 import FreeDocumentPage from './pages/FreeResources/FreeResourcesPage';
 import PaidDocumentPage from './pages/PaidResources/PaidResourcesPage';
-import OnlineCoursesPage from './pages/OnlineCoursesPage';
+import OnlineCoursesPage from './pages/OnlineCoursesPage/OnlineCoursesPage';
 import MainBlogPage from './pages/Blogs/MainBlogPage';
 import AccountPage from './pages/AccountManagement/AccountPage';
 import MainVocabPage from './pages/FreeResources/MainVocabPage';
