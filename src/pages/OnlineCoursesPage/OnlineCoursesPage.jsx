@@ -7,3 +7,4 @@ const OnlineCoursesPage = () => {
 }
 
 export default OnlineCoursesPage
+
