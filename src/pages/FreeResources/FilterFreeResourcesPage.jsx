@@ -35,12 +35,12 @@ const FilterFreeResourcesPage = () => {
             <div className='mx-10 mt-6'>
                 <Link to='/free-resources'>
                     <Button className='text-[16x]' shape="round" size={size}>
-                        Tất cả khóa học
+                        Tất cả tài liệu
                     </Button>
                 </Link>
                 <Link to='/free-resources/learned'>
                     <Button className='ml-2 text-[16px]' shape="round" size={size}>
-                        Khóa học đã mua
+                        Tài liệu đã học
                     </Button>
                 </Link>
                 <Link to='/free-resources/filter'>
