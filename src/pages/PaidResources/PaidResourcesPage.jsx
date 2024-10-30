@@ -7,6 +7,7 @@ import Comments from '../../components/Comments';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { CiFilter } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const contentStyle = {
   height: '100%',
@@ -32,13 +33,19 @@ const PaidResourcesPage = () => {
       </Carousel>
 
       <div className='mx-10 mt-6'>
-        <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
-          Tất cả khóa học
-        </Button>
-        <Button className='ml-2 text-[16px]' shape="round" size={size}>
-          Khóa học đã mua
-        </Button>
-        <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
+        <Link to='/paid-resources'>
+          <Button className='text-[16x]'  type="primary" shape="round" size={size}>
+            Tất cả khóa học
+          </Button>
+        </Link>
+        <Link to='/paid-resources/learned'>
+          <Button className='ml-2 text-[16px]' shape="round" size={size}>
+            Khóa học đã mua
+          </Button>
+        </Link>
+        <Link to='/paid-resources/filter'>
+          <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
+        </Link>
         <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
       </div>
 
@@ -55,7 +62,14 @@ const PaidResourcesPage = () => {
       <div className='mx-10'>
         <Courses />
       </div>
-      <Comments />
+
+      <div className='text-center bg-[#F8F9FD] py-10'>
+        <h1 className='font-bold text-[45px]'>Cảm nghĩ của học sinh về tài liệu trả phí</h1>
+        <p className='text-[20px] font-semibold'>
+          Hãy tìm hiểu cảm nhận của các học viên về khóa học của Sakura
+        </p>
+        <Comments />
+      </div>
     </div>
   )
 }

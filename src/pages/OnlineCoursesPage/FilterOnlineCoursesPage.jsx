@@ -33,17 +33,17 @@ const FilterOnlineCoursesPage = () => {
             </Carousel>
 
             <div className='mx-10 mt-6'>
-                <Link to='/free-resources'>
+                <Link to='/online-resources'>
                     <Button className='text-[16x]' shape="round" size={size}>
                         Tất cả khóa học
                     </Button>
                 </Link>
-                <Link to='/free-resources/learned'>
+                <Link to='/online-resources/learned'>
                     <Button className='ml-2 text-[16px]' shape="round" size={size}>
                         Khóa học đã mua
                     </Button>
                 </Link>
-                <Link to='/free-resources/filter'>
+                <Link to='/online-resources/filter'>
                     <Button className='ml-2' shape="circle" type="primary" icon={<CiFilter className='text-[16px]' />} size={size} />
                 </Link>
                 <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />

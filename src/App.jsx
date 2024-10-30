@@ -7,9 +7,13 @@ import LoginPage from './pages/LoginPage';
 import SearchingPage from './pages/SearchingPage';
 import ChattingPage from './pages/ChattingPage';
 import HomePage from './pages/HomePage';
-import FreeDocumentPage from './pages/FreeResources/FreeResourcesPage';
-import PaidDocumentPage from './pages/PaidResources/PaidResourcesPage';
+import FreeResourcesPage from './pages/FreeResources/FreeResourcesPage';
+import PaidResourcesPage from './pages/PaidResources/PaidResourcesPage';
+import LearnedPaidResourcesPage from './pages/PaidResources/LearnedPaidResourcesPage';
+import FilterPaidResourcesPage from './pages/PaidResources/FilterPaidResourcesPage';
 import OnlineCoursesPage from './pages/OnlineCoursesPage/OnlineCoursesPage';
+import LearnedOnlineCoursesPage from './pages/OnlineCoursesPage/LearnedOnlineCoursesPage';
+import FilterOnlineCoursesPage from './pages/OnlineCoursesPage/FilterOnlineCoursesPage';
 import MainBlogPage from './pages/Blogs/MainBlogPage';
 import AccountPage from './pages/AccountManagement/AccountPage';
 import MainVocabPage from './pages/FreeResources/MainVocabPage';
@@ -25,6 +29,7 @@ import MonthSchedulerPage from './pages/AccountManagement/MyScheduler/MonthSched
 import MyTestsAccountPage from './pages/AccountManagement/MyTestsAccountPage';
 import ArticlesBlogPage from './pages/Blogs/ArticlesBlogPage';
 import DetailArticlePage from './pages/Blogs/DetailArticlePage';
+import NoFooterLayout from './layouts/NoFooterLayout';
 
 function App() {
 
@@ -33,13 +38,17 @@ function App() {
     { path: '/', element: <HomePage /> },
     { path: '/dashboard', element: <DashboardPage /> },
     { path: '/search', element: <SearchingPage /> },
-    { path: '/free-resources', element: <FreeDocumentPage /> },
-    { path: '/paid-resources', element: <PaidDocumentPage /> },
+    { path: '/free-resources', element: <FreeResourcesPage /> },
+    { path: '/paid-resources', element: <PaidResourcesPage /> },
     { path: '/online-courses', element: <OnlineCoursesPage /> },
     { path: '/blog', element: <MainBlogPage /> },
+  ];
+
+  // Tạo một mảng cho các route không có footer
+  const noFooterRoutes = [
     { path: '/chat', element: <ChattingPage /> },
     { path: '/setting', element: <SettingsPage /> },
-  ];
+  ]
 
   // Tạo một mảng cho các route liên quan đến tài liệu miễn phí
   const freeResourcesRoutes = [
@@ -50,6 +59,18 @@ function App() {
     { path: 'main-listening', element: <MainGrammarPage /> },
     { path: 'main-reading', element: <MainGrammarPage /> },
     { path: 'main-kanji', element: <MainGrammarPage /> },
+  ];
+
+  // Tạo một mảng cho các route liên quan đến tài liệu online
+  const onlineResourcesRoutes = [
+    { path: 'learned', element: <LearnedOnlineCoursesPage /> },
+    { path: 'filter', element: <FilterOnlineCoursesPage /> },
+  ];
+
+  // Tạo một mảng cho các route liên quan đến tài liệu trả phí
+  const paidResourcesRoutes = [
+    { path: 'learned', element: <LearnedPaidResourcesPage /> },
+    { path: 'filter', element: <FilterPaidResourcesPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến quản lý tài khoản
@@ -83,9 +104,40 @@ function App() {
         />
       ))}
 
+      {/* Render các route không có footer */}
+      {noFooterRoutes.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          element={<NoFooterLayout>{route.element}</NoFooterLayout>}
+        />
+      ))}
+
       {/* Render các route con của Free Resources */}
       <Route path='/free-resources'>
         {freeResourcesRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={<MainLayout>{route.element}</MainLayout>}
+          />
+        ))}
+      </Route>
+
+      {/* Render các route con của Paid Resources */}
+      <Route path='/paid-resources'>
+        {paidResourcesRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={<MainLayout>{route.element}</MainLayout>}
+          />
+        ))}
+      </Route>
+
+      {/* Render các route con của Online Resources */}
+      <Route path='/online-courses'>
+        {paidResourcesRoutes.map((route, index) => (
           <Route
             key={index}
             path={route.path}

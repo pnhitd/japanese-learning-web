@@ -39,7 +39,7 @@ const LearnedResourcesPage = () => {
           </Button>
         </Link>
         <Link to='/free-resources/learned'>
-          <Button className='ml-2 text-[16px] font-semibold'  type="primary" shape="round" size={size}>
+          <Button className='ml-2 text-[16px] font-semibold' type="primary" shape="round" size={size}>
             Khóa học đã mua
           </Button>
         </Link>
@@ -62,7 +62,14 @@ const LearnedResourcesPage = () => {
       <div className='mx-10'>
         <Courses />
       </div>
-      <Comments />
+
+      <div className='text-center bg-[#F8F9FD] py-10'>
+        <h1 className='font-bold text-[45px]'>Cảm nghĩ của học sinh về khóa học</h1>
+        <p className='text-[20px] font-semibold'>
+          Hãy tìm hiểu cảm nhận của các học viên về khóa học của Sakura
+        </p>
+        <Comments />
+      </div>
 
     </div>
   )

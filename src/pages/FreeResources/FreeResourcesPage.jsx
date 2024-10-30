@@ -17,7 +17,7 @@ const contentStyle = {
   borderRadius: '10px'
 };
 
-const FreeDocumentPage = () => {
+const FreeResourcesPage = () => {
   const [size, setSize] = useState('large');
 
   return (
@@ -61,10 +61,17 @@ const FreeDocumentPage = () => {
       <div className='mx-10'>
         <Courses />
       </div>
-      <Comments />
+
+      <div className='text-center bg-[#F8F9FD] py-10'>
+        <h1 className='font-bold text-[45px]'>Cảm nghĩ của học sinh về khóa học</h1>
+        <p className='text-[20px] font-semibold'>
+          Hãy tìm hiểu cảm nhận của các học viên về khóa học của Sakura
+        </p>
+        <Comments />
+      </div>
 
     </div>
   )
 }
 
-export default FreeDocumentPage
+export default FreeResourcesPage
