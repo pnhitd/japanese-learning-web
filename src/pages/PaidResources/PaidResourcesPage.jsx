@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Courses from '../../components/Courses';
+import PaidCourses from '../../components/Courses';
 import { Carousel } from 'antd';
 import c1 from '../../assets/carouselImgs/c1.png'
 import c2 from '../../assets/carouselImgs/c2.png'
@@ -60,7 +60,7 @@ const PaidResourcesPage = () => {
         </p>
       </div>
       <div className='mx-10'>
-        <Courses />
+        <PaidCourses />
       </div>
 
       <div className='text-center bg-[#F8F9FD] py-10'>

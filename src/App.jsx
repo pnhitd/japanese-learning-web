@@ -19,6 +19,10 @@ import MainBlogPage from "./pages/Blogs/MainBlogPage";
 import AccountPage from "./pages/AccountManagement/AccountPage";
 import MainVocabPage from "./pages/FreeResources/MainVocabPage";
 import MainGrammarPage from "./pages/FreeResources/MainGrammarPage";
+import MainVocabPaidPage from "./pages/PaidResources/MainVocabPaidPage";
+import MainGrammarPaidPage from "./pages/PaidResources/MainGrammarPaidPage";
+import MainListeningPaidPage from "./pages/PaidResources/MainListeningPaidPage";
+import MainKanjiPaidPage from "./pages/PaidResources/MainKanjiPaidPage";
 import SettingsPage from "./pages/SettingsPage";
 import LearnedResourcesPage from "./pages/FreeResources/LearnedResourcesPage";
 import FilterFreeResourcesPage from "./pages/FreeResources/FilterFreeResourcesPage";
@@ -70,6 +74,11 @@ function App() {
   const paidResourcesRoutes = [
     { path: "learned", element: <LearnedPaidResourcesPage /> },
     { path: "filter", element: <FilterPaidResourcesPage /> },
+    { path: "main-vocab-paid", element: <MainVocabPaidPage /> },
+    { path: "main-grammar-paid", element: <MainGrammarPaidPage /> },
+    { path: "main-listening-paid", element: <MainListeningPaidPage /> },
+    //{ path: "main-reading-paid", element: <MainReadingPaidPage /> },
+    //{ path: "main-kanji-paid", element: <MainKanjiPaidPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến quản lý tài khoản
