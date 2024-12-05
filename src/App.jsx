@@ -31,11 +31,11 @@ import MyTestsAccountPage from "./pages/AccountManagement/MyTestsAccountPage";
 import ArticlesBlogPage from "./pages/Blogs/ArticlesBlogPage";
 import DetailArticlePage from "./pages/Blogs/DetailArticlePage";
 import NoFooterLayout from "./layouts/NoFooterLayout";
+import HomePageLayout from "./layouts/HomePageLayout";
 
 function App() {
   // Tạo một mảng cho các route chính
   const mainRoutes = [
-    { path: "/", element: <HomePage /> },
     { path: "/dashboard", element: <DashboardPage /> },
     { path: "/free-resources", element: <FreeResourcesPage /> },
     { path: "/paid-resources", element: <PaidResourcesPage /> },
@@ -96,7 +96,15 @@ function App() {
 
   return (
     <Routes>
-      {/* Trang đăng nhập và đăng ký */}
+      {/* Trang đăng nhập và đăng ký, trang chính */}
+      <Route
+        path="/"
+        element={
+          <HomePageLayout>
+            <HomePage />
+          </HomePageLayout>
+        }
+      />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
 

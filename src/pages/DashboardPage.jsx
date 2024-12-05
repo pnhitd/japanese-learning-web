@@ -293,18 +293,16 @@ const Dashboard = () => {
         <div className="ml-16 mt-10">
           <Link to="/account/scheduler/month">
             <div className="flex">
-              <CiHeart className="w-6 h-6 text-blue-600 my-auto" />
-              <h3 className="ml-2 font-semibold text-xl text-blue-600">
+              <CiHeart className="w-6 h-6 my-auto" />
+              <h3 className="ml-2 font-semibold text-lg">
                 Xem lịch học trong tuần{" "}
               </h3>
             </div>
           </Link>
 
           <div className="flex mt-4">
-            <CiCirclePlus className="w-6 h-6 text-blue-600 my-auto" />
-            <h3 className="ml-2 font-semibold text-xl text-blue-600">
-              Thêm lịch trình mới{" "}
-            </h3>
+            <CiCirclePlus className="w-6 h-6 my-auto" />
+            <h3 className="ml-2 font-semibold text-lg">Thêm lịch trình mới </h3>
           </div>
 
           <h2 className="font-semibold text-lg mt-8">Bài tập cần làm</h2>

@@ -12,20 +12,18 @@ const SuggestCourses = () => {
           hoverable
           style={{
             width: 270,
-            height: 400,
+            height: 360,
             marginBottom: "20px",
             borderRadius: "10px",
           }}
           cover={<img alt="" src={course.image} />}
         >
           <div>
-            <h2 className="font-bold text-2xl">{course.title}</h2>
-            <div className="mt-2 text-[16px] leading-8">
-              {course.description}
-            </div>
+            <h2 className="font-bold text-xl">{course.title}</h2>
+            <div className="mt-2 leading-6">{course.description}</div>
             <Link to="/free-resources/main-vocab">
               <Button
-                className="mt-2 w-[100%] py-5 bg-[#2B308B] text-[20px] font-semibold"
+                className="mt-2 w-[100%] py-5 bg-[#2B308B] text-lg font-semibold"
                 type="primary"
               >
                 Bắt đầu học
