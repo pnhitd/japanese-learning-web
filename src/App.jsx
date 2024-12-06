@@ -26,6 +26,8 @@ import MainVocabPaidPage from "./pages/PaidResources/MainVocabPaidPage";
 import MainGrammarPaidPage from "./pages/PaidResources/MainGrammarPaidPage";
 import MainListeningPaidPage from "./pages/PaidResources/MainListeningPaidPage";
 import MainKanjiPaidPage from "./pages/PaidResources/MainKanjiPaidPage";
+import AddToCartPage from "./pages/Payment/AddToCartPage";
+import CartInformationPage from "./pages/Payment/CartInformationPage";
 import SettingsPage from "./pages/SettingsPage";
 import LearnedResourcesPage from "./pages/FreeResources/LearnedResourcesPage";
 import FilterFreeResourcesPage from "./pages/FreeResources/FilterFreeResourcesPage";
@@ -106,10 +108,21 @@ function App() {
     { path: "vocab", element: <SearchingVocab /> },
   ];
 
+  // Tạo một mảng cho các route liên quan đến thanh toán đơn hàng
+  const PaymentRoutes = [
+     { path: "/cart-information", element: <CartInformationPage /> },
+     { path: "add-cart", element: <AddToCartPage /> },
+  //   { path: "scheduler", element: <TodaySchedulerPage /> },
+  //   { path: "scheduler/month", element: <MonthSchedulerPage /> },
+  //   { path: "my-resources", element: <MyResourcesPage /> },
+  //   { path: "my-resources/learned", element: <LearnedAccountPage /> },
+  //   { path: "my-tests", element: <MyTestsAccountPage /> },
+   ];
+
   return (
     <Routes>
       {/* Trang đăng nhập và đăng ký, trang chính */}
-      <Route
+      {/* <Route
         path="/"
         element={
           <HomePageLayout>
@@ -155,6 +168,17 @@ function App() {
       {/* Render các route con của Paid Resources */}
       <Route path="/paid-resources">
         {paidResourcesRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={<MainLayout>{route.element}</MainLayout>}
+          />
+        ))}
+      </Route>
+
+      {/* Render các route con của Payment */}
+      <Route path="/cart-information">
+        {PaymentRoutes.map((route, index) => (
           <Route
             key={index}
             path={route.path}

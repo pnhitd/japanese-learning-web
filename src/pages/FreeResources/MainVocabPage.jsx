@@ -13,8 +13,8 @@ const MainVocabPage = () => {
       <div className='flex'>
         <div className='max-w-[70%]'>
           <Link className='flex items-center mb-2' to='/free-resources'>
-            <AiOutlineArrowLeft />
-            <p className='font-semibold text-lg ml-2'>Quay lại</p>
+            <AiOutlineArrowLeft className='text-[#5A81FA]'/>
+            <p className='font-semibold text-lg ml-2 text-[#5A81FA]'>Quay lại</p>
           </Link>
           <img className='float-left mr-4' src={vocab1} alt="" />
           <div className='leading-6'>
@@ -44,6 +44,7 @@ const MainVocabPage = () => {
           <Lessons />
         </div>
       </div>
+
     </div>
   )
 }
