@@ -15,13 +15,13 @@ const items = [
   },
   {
     key: '2',
-    icon: <Link to='/account'><UserOutlined /></Link>,
-    label: 'Profile',
+    icon: <UserOutlined />,
+    label: <Link to='/account'>Profile</Link>,
   },
   {
     key: '3',
     icon: <LogoutOutlined />,
-    label: 'Logout',
+    label: <Link to='/login'>Logout</Link>,
   }
 ];
 
