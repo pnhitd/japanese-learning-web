@@ -119,3 +119,12 @@ const MainVocabPaidPage = () => {
 };
 
 export default MainVocabPaidPage;
+{/* <Link to="/cart-information">
+                  <Button
+                    key="buy"
+                    type="primary"
+                    className="text-base font-semibold rounded-md bg-[#2B308B] p-5"
+                  >
+                    Mua ngay &rarr;
+                  </Button>
+                </Link> */}
