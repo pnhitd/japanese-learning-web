@@ -21,8 +21,22 @@ import i18 from "../assets/heroImgs/18.jpg";
 import i19 from "../assets/heroImgs/19.jpg";
 import i20 from "../assets/heroImgs/20.jpg";
 import i21 from "../assets/heroImgs/21.jpg";
+import { useNavigate } from "react-router-dom";
+
+const contentStyle = {
+  height: "160px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+};
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/login");
+  };
+
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
 
   const handleNext = () => {
@@ -86,41 +100,24 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <Carousel autoplay>
-        {heroImgsData.map((item) => (
-          <div key={item.id}>
-            <div
-              style={{
-                backgroundImage: `url(${item.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "80vh",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "white",
-                flexDirection: "column",
-                padding: "0 20px",
-              }}
-            >
-              <Flex>
-                <div>
-                  <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
-                    {item.title}
-                  </h1>
-                  <p style={{ fontSize: "1.2rem", textAlign: "center" }}>
-                    {item.desc}
-                  </p>
-                  <Button
-                    type="primary"
-                    size="large"
-                    style={{ marginTop: "1rem" }}
-                  >
-                    Bắt đầu học
-                  </Button>
-                </div>
-
-                <img src={item.img} alt="" />
-              </Flex>
+        {heroImgsData.map((heroImg) => (
+          <div
+            key={heroImg.id}
+            className="relative h-[90vh] w-full flex items-center justify-center"
+          >
+            <img
+              src={heroImg.img}
+              alt=""
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-[#00000099] flex items-center justify-center">
+              <div className="text-white text-center px-8">
+                <h1 className="text-5xl font-bold">{heroImg.title}</h1>
+                <p className="text-xl mt-4 mx-10 leading-10">{heroImg.desc}</p>
+                <Button className="mt-4" type="primary" onClick={handleClick}>
+                  Bắt đầu học
+                </Button>
+              </div>
             </div>
           </div>
         ))}
@@ -167,10 +164,13 @@ const HomePage = () => {
               Khóa học giúp bạn có thể tự tin giao tiếp trong các tình huống
               hàng ngày.
             </p>
-            <Link to="" className="flex mx-10 mt-[115px]">
-              <p className="font-semibold">MUA NGAY</p>
+            <div
+              className="flex mx-10 mt-[115px] hover:text-[#1477f9]"
+              onClick={handleClick}
+            >
+              <p className="font-semibold cursor-pointer">MUA NGAY</p>
               <GrFormNextLink className="w-5 h-5 my-auto" />
-            </Link>
+            </div>
           </div>
           <div className="ml-4">
             <Flex className="bg-white">
@@ -182,10 +182,13 @@ const HomePage = () => {
                   Khóa học giúp bạn nắm vững ngữ pháp và sử dụng linh hoạt trong
                   giao tiếp.
                 </p>
-                <Link to="" className="flex ml-2 mt-[80px]">
-                  <p className="font-semibold">MUA NGAY</p>
+                <div
+                  className="flex ml-2 mt-[80px] cursor-pointer hover:text-[#1477f9]"
+                  onClick={handleClick}
+                >
+                  <p className="font-semibold ">MUA NGAY</p>
                   <GrFormNextLink className="w-5 h-5 my-auto" />
-                </Link>
+                </div>
               </div>
               <img src={i7} alt="" className="w-[300px] h-[250px]" />
             </Flex>
@@ -199,10 +202,13 @@ const HomePage = () => {
                     Khóa học giúp bạn nắm vững ngữ pháp và sử dụng linh hoạt
                     trong giao tiếp.
                   </p>
-                  <Link to="" className="flex ml-2 mt-[80px]">
+                  <div
+                    className="flex ml-2 mt-[80px] cursor-pointer hover:text-[#1477f9]"
+                    onClick={handleClick}
+                  >
                     <p className="font-semibold">MUA NGAY</p>
                     <GrFormNextLink className="w-5 h-5 my-auto" />
-                  </Link>
+                  </div>
                 </div>
                 <img src={i8} alt="" className="w-[300px] h-[250px]" />
               </Flex>
@@ -249,11 +255,12 @@ const HomePage = () => {
               kinh nghiệm học tiếng Nhật, những câu chuyện văn hóa thú vị và
               thông tin mới nhất về kỳ thi JLPT.
             </p>
-            <Link>
-              <button className="text-white bg-[#292D32] font-semibold py-2 px-6 rounded-md my-4">
-                Xem tất cả
-              </button>
-            </Link>
+            <button
+              onClick={handleClick}
+              className="text-white bg-[#292D32] font-semibold py-2 px-6 rounded-md my-4 hover:bg-gray-800"
+            >
+              Xem tất cả
+            </button>
           </div>
         </Flex>
 
@@ -272,7 +279,10 @@ const HomePage = () => {
                 <p className="font-bold text-white text-xl">
                   Học bổng chính phủ Nhật
                 </p>
-                <GrFormNextLink className="w-8 h-8 my-auto bg-white text-black rounded-full" />
+                <GrFormNextLink
+                  className="w-8 h-8 my-auto bg-white text-black rounded-full"
+                  onClick={handleClick}
+                />
               </Flex>
               <p className="my-2 text-white font-semibold">
                 Các thông tin về học bổng.
@@ -292,7 +302,10 @@ const HomePage = () => {
             <div className="w-[100%] py-10  bg-[#00000099] px-4 content-end absolute bottom-0">
               <Flex className="justify-between">
                 <p className="font-bold text-white text-xl">Du học</p>
-                <GrFormNextLink className="w-8 h-8 my-auto bg-white text-black rounded-full" />
+                <GrFormNextLink
+                  className="w-8 h-8 my-auto bg-white text-black rounded-full"
+                  onClick={handleClick}
+                />
               </Flex>
               <p className="my-2 text-white font-semibold">
                 Cơ hội du học cho bạn!
@@ -312,7 +325,10 @@ const HomePage = () => {
             <div className="w-[100%] py-10  bg-[#00000099] px-4 content-end absolute bottom-0">
               <Flex className="justify-between">
                 <p className="font-bold text-white text-xl">Cuộc sống</p>
-                <GrFormNextLink className="w-8 h-8 my-auto bg-white text-black rounded-full" />
+                <GrFormNextLink
+                  className="w-8 h-8 my-auto bg-white text-black rounded-full"
+                  onClick={handleClick}
+                />
               </Flex>
               <p className="my-2 text-white font-semibold">
                 Sốc văn hóa khi ở Nhật?
@@ -323,7 +339,7 @@ const HomePage = () => {
       </div>
 
       <div id="purposes" className="">
-        <p className="font-bold text-3xl mb-4 mx-[300px] mt-10">Phương châm</p>
+        <p className="font-bold text-3xl mb-4 text-center mt-10">Phương châm</p>
         <div className="-my-[100px] flex min-h-screen items-center justify-center overflow-x-hidden px-1 py-6">
           <div className="group/list flex justify-center gap-1">
             <div className="peer order-last flex w-max items-center justify-center gap-1">
@@ -369,7 +385,10 @@ const HomePage = () => {
               Chúng tôi cung cấp cho bạn bài kiểm tra đầu vào để kiểm tra trình
               độ hiện tại và giúp bạn dễ dàng xây dựng một lộ trình học hợp lý.
             </p>
-            <button className="bg-[#1C2755] text-white py-2 px-4 font-semibold mt-4 rounded-lg">
+            <button
+              className="bg-[#1C2755] text-white py-2 px-4 font-semibold mt-4 rounded-lg hover:bg-[#364D79]"
+              onClick={handleClick}
+            >
               Làm bài ngay
             </button>
           </div>
