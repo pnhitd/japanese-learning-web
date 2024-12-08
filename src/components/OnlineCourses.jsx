@@ -12,7 +12,7 @@ const OnlineCourses = ({ filter = "all" }) => {
   });
 
   return (
-    <div className="grid grid-cols-5 gap-6">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
       {filteredCourses.map((course, index) => (
         <motion.div
           className="w-[260px] h-[327px] bg-white rounded-3xl shadow-lg overflow-hidden"
