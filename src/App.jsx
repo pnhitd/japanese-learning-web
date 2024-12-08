@@ -2,11 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import DashboardPage from "./pages/DashboardPage";
-import SignUpPage from './pages/SignUpPage';
-import LoginPage from './pages/LoginPage';
-import ForgotPasswordPage from './pages/ForgotPasswordPage';
-import ForgotPasswordOtpPage from './pages/FogotPasswordOtpPage';
-import ResetPasswordPage from './pages/ResetPasswordPage';
+import SignUpPage from "./pages/SignUpPage";
+import LoginPage from "./pages/LoginPage";
 import SearchingPage from "./pages/Searching/SearchingPage";
 import SearchingVocab from "./pages/Searching/SearchingVocab";
 import ChattingPage from "./pages/ChattingPage";
@@ -30,6 +27,10 @@ import MainVocabPaidPage from "./pages/PaidResources/MainVocabPaidPage";
 import MainGrammarPaidPage from "./pages/PaidResources/MainGrammarPaidPage";
 import MainListeningPaidPage from "./pages/PaidResources/MainListeningPaidPage";
 import MainKanjiPaidPage from "./pages/PaidResources/MainKanjiPaidPage";
+import AddToCartPage from "./pages/Payment/AddToCartPage";
+import CartInformationPage from "./pages/Payment/CartInformationPage";
+import PaymentMethods from "./pages/Payment/PaymentMethods";
+import PaidFinishPage from "./pages/Payment/PaidFinishPage";
 import SettingsPage from "./pages/SettingsPage";
 import LearnedResourcesPage from "./pages/FreeResources/LearnedResourcesPage";
 import FilterFreeResourcesPage from "./pages/FreeResources/FilterFreeResourcesPage";
@@ -115,6 +116,14 @@ function App() {
     { path: "vocab", element: <SearchingVocab /> },
   ];
 
+  // Tạo một mảng cho các route liên quan đến thanh toán đơn hàng
+  const PaymentRoutes = [
+     { path: "/cart-information", element: <CartInformationPage /> },
+     { path: "add-cart", element: <AddToCartPage /> },
+     { path: "payment-methods", element: <PaymentMethods /> },
+     { path: "paid-finish", element: <PaidFinishPage /> },
+   ];
+
   return (
     <Routes>
       {/* Trang đăng nhập và đăng ký, trang chính */}
@@ -126,11 +135,8 @@ function App() {
           </HomePageLayout>
         }
       />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/signup' element={<SignUpPage />} />
-      <Route path='/forgot' element={<ForgotPasswordPage />} />
-      <Route path='/forgotOTP' element={<ForgotPasswordOtpPage />} />
-      <Route path='/resetPassword' element={<ResetPasswordPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
 
       {/* Render các route chính */}
       {mainRoutes.map((route, index) => (
@@ -164,6 +170,17 @@ function App() {
       {/* Render các route con của Paid Resources */}
       <Route path="/paid-resources">
         {paidResourcesRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={<MainLayout>{route.element}</MainLayout>}
+          />
+        ))}
+      </Route>
+
+      {/* Render các route con của Payment */}
+      <Route path="/cart-information">
+        {PaymentRoutes.map((route, index) => (
           <Route
             key={index}
             path={route.path}
