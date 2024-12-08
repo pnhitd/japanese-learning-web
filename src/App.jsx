@@ -25,6 +25,8 @@ import MainListeningPaidPage from "./pages/PaidResources/MainListeningPaidPage";
 import MainKanjiPaidPage from "./pages/PaidResources/MainKanjiPaidPage";
 import AddToCartPage from "./pages/Payment/AddToCartPage";
 import CartInformationPage from "./pages/Payment/CartInformationPage";
+import PaymentMethods from "./pages/Payment/PaymentMethods";
+import PaidFinishPage from "./pages/Payment/PaidFinishPage";
 import SettingsPage from "./pages/SettingsPage";
 import LearnedResourcesPage from "./pages/FreeResources/LearnedResourcesPage";
 import FilterFreeResourcesPage from "./pages/FreeResources/FilterFreeResourcesPage";
@@ -109,24 +111,21 @@ function App() {
   const PaymentRoutes = [
      { path: "/cart-information", element: <CartInformationPage /> },
      { path: "add-cart", element: <AddToCartPage /> },
-  //   { path: "scheduler", element: <TodaySchedulerPage /> },
-  //   { path: "scheduler/month", element: <MonthSchedulerPage /> },
-  //   { path: "my-resources", element: <MyResourcesPage /> },
-  //   { path: "my-resources/learned", element: <LearnedAccountPage /> },
-  //   { path: "my-tests", element: <MyTestsAccountPage /> },
+     { path: "payment-methods", element: <PaymentMethods /> },
+     { path: "paid-finish", element: <PaidFinishPage /> },
    ];
 
   return (
     <Routes>
       {/* Trang đăng nhập và đăng ký, trang chính */}
-      {/* <Route
+      <Route
         path="/"
         element={
           <HomePageLayout>
             <HomePage />
           </HomePageLayout>
         }
-      /> */}
+      />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
 
