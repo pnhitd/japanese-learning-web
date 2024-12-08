@@ -45,7 +45,6 @@ import DetailArticlePage from "./pages/Blogs/DetailArticlePage";
 import NoFooterLayout from "./layouts/NoFooterLayout";
 import HomePageLayout from "./layouts/HomePageLayout";
 
-
 function App() {
   // Tạo một mảng cho các route chính
   const mainRoutes = [
@@ -77,7 +76,7 @@ function App() {
   const onlineResourcesRoutes = [
     { path: "learned", element: <LearnedOnlineCoursesPage /> },
     { path: "filter", element: <FilterOnlineCoursesPage /> },
-    { path: "infor", element: <MainInforOnlineCousePage/> },
+    { path: "infor", element: <MainInforOnlineCousePage /> },
     { path: "study-path", element: <MainPathStudyOnlineCoursesPage /> },
     { path: "commit", element: <MainCommitOnlineCoursesPage /> },
     { path: "schedule", element: <MainScheduleOnlineCoursesPage /> },
@@ -90,8 +89,8 @@ function App() {
     { path: "main-vocab-paid", element: <MainVocabPaidPage /> },
     { path: "main-grammar-paid", element: <MainGrammarPaidPage /> },
     { path: "main-listening-paid", element: <MainListeningPaidPage /> },
-    //{ path: "main-reading-paid", element: <MainReadingPaidPage /> },
-    //{ path: "main-kanji-paid", element: <MainKanjiPaidPage /> },
+    // { path: "main-reading-paid", element: <MainReadingPaidPage /> },
+    // { path: "main-kanji-paid", element: <MainKanjiPaidPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến quản lý tài khoản
@@ -118,11 +117,11 @@ function App() {
 
   // Tạo một mảng cho các route liên quan đến thanh toán đơn hàng
   const PaymentRoutes = [
-     { path: "/cart-information", element: <CartInformationPage /> },
-     { path: "add-cart", element: <AddToCartPage /> },
-     { path: "payment-methods", element: <PaymentMethods /> },
-     { path: "paid-finish", element: <PaidFinishPage /> },
-   ];
+    { path: "/cart-information", element: <CartInformationPage /> },
+    { path: "add-cart", element: <AddToCartPage /> },
+    { path: "payment-methods", element: <PaymentMethods /> },
+    { path: "paid-finish", element: <PaidFinishPage /> },
+  ];
 
   return (
     <Routes>
@@ -245,9 +244,9 @@ function App() {
       <Route
         path="*"
         element={
-          <MainLayout>
+          <HomePageLayout>
             <HomePage />
-          </MainLayout>
+          </HomePageLayout>
         }
       />
     </Routes>
