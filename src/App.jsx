@@ -18,6 +18,10 @@ import FilterPaidResourcesPage from "./pages/PaidResources/FilterPaidResourcesPa
 import OnlineCoursesPage from "./pages/OnlineCoursesPage/OnlineCoursesPage";
 import LearnedOnlineCoursesPage from "./pages/OnlineCoursesPage/LearnedOnlineCoursesPage";
 import FilterOnlineCoursesPage from "./pages/OnlineCoursesPage/FilterOnlineCoursesPage";
+import MainInforOnlineCousePage from "./pages/OnlineCoursesPage/MainInforOnlineCousePage";
+import MainPathStudyOnlineCoursesPage from "./pages/OnlineCoursesPage/MainPathStudyOnlineCoursesPage";
+import MainScheduleOnlineCoursesPage from "./pages/OnlineCoursesPage/MainScheduleOnlineCoursesPage";
+import MainCommitOnlineCoursesPage from "./pages/OnlineCoursesPage/MainCommitOnlineCoursesPage";
 import MainBlogPage from "./pages/Blogs/MainBlogPage";
 import AccountPage from "./pages/AccountManagement/AccountPage";
 import MainVocabPage from "./pages/FreeResources/MainVocabPage";
@@ -39,6 +43,7 @@ import ArticlesBlogPage from "./pages/Blogs/ArticlesBlogPage";
 import DetailArticlePage from "./pages/Blogs/DetailArticlePage";
 import NoFooterLayout from "./layouts/NoFooterLayout";
 import HomePageLayout from "./layouts/HomePageLayout";
+
 
 function App() {
   // Tạo một mảng cho các route chính
@@ -71,6 +76,10 @@ function App() {
   const onlineResourcesRoutes = [
     { path: "learned", element: <LearnedOnlineCoursesPage /> },
     { path: "filter", element: <FilterOnlineCoursesPage /> },
+    { path: "infor", element: <MainInforOnlineCousePage/> },
+    { path: "study-path", element: <MainPathStudyOnlineCoursesPage /> },
+    { path: "commit", element: <MainCommitOnlineCoursesPage /> },
+    { path: "schedule", element: <MainScheduleOnlineCoursesPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến tài liệu trả phí
@@ -165,7 +174,7 @@ function App() {
 
       {/* Render các route con của Online Resources */}
       <Route path="/online-courses">
-        {paidResourcesRoutes.map((route, index) => (
+        {onlineResourcesRoutes.map((route, index) => (
           <Route
             key={index}
             path={route.path}
