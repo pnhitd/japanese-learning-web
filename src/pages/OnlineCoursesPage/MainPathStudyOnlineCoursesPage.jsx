@@ -58,12 +58,16 @@ const MainPathStudyOnlineCoursesPage = () => {
           <div className='basis-1/3 flex flex-col'>
               <img src={COI1} alt="Ảnh minh họa" />
               <div className="mt-7 flex flex-row justify-between">
-                  <button className="w-52 py-2 text-base font-medium border border-gray-800 text-gray-800 rounded-md hover:border-[#2B308B] hover:text-[#2B308B] ">
-                    Mua ngay
-                  </button>
-                  <button className="w-52 py-2 text-base font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
-                    Thêm vào giỏ hàng
-                  </button>
+                  <Link to='/cart-information'>
+                    <button className="w-52 py-2 text-base font-medium border border-gray-800 text-gray-800 rounded-md hover:border-[#2B308B] hover:text-[#2B308B] ">
+                      Mua ngay
+                    </button>
+                  </Link>
+                  <Link to='/cart-information'>
+                    <button className="w-52 py-2 text-base font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
+                      Thêm vào giỏ hàng
+                    </button>
+                  </Link>
               </div>
           </div>
           <div className='ml-20 basis-2/3'>

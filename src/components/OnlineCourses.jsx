@@ -55,21 +55,29 @@ const OnlineCourses = ({ filter = "all" }) => {
               {/* Kiểm tra status */}
               {course.status === "bought" ? (
                 <>
-                  <button className="flex-1 py-2 text-sm font-medium border border-gray-800 text-gray-800 rounded-md hover:bg-gray-100">
-                    Chi tiết
-                  </button>
-                  <button className="flex-1 py-2 text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
-                    Vào học
-                  </button>
+                  <Link to='/online-courses/infor'>
+                      <button className="flex-1 py-2 w-28 text-sm font-medium border border-gray-800 text-gray-800 rounded-md hover:bg-gray-100">
+                        Chi tiết
+                      </button>
+                  </Link>
+                  <Link to='/online-courses/infor'>
+                      <button className="flex-1 py-2 w-28 text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
+                        Vào học
+                      </button>
+                  </Link>
                 </>
               ) : (
                 <>
-                  <button className="flex-1 py-2 text-sm font-medium border border-gray-800 text-gray-800 rounded-md hover:bg-gray-100">
-                    Mua ngay
-                  </button>
-                  <button className="flex-1 py-2 text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
-                    Xem chi tiết
-                  </button>
+                  <Link to='/cart-information'>
+                      <button className="flex-1 py-2 w-28 text-sm font-medium border border-gray-800 text-gray-800 rounded-md hover:bg-gray-100">
+                        Mua ngay
+                      </button>
+                  </Link>
+                  <Link to='/online-courses/infor'>
+                      <button className="flex-1 py-2 w-28 text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
+                        Xem chi tiết
+                      </button>
+                  </Link>
                 </>
               )}
             </div>

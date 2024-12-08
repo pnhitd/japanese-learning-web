@@ -70,12 +70,16 @@ const MainInforOnlineCousePage = () => {
                   <p>Mục tiêu học tập: Đạt được khả năng sử dụng tiếng Nhật một cách linh hoạt và tự tin trong môi trường làm việc Công nghệ Thông Tin, từ việc đọc hiểu tài liệu, thảo luận, đến việc giao tiếp hàng ngày và làm việc nhóm.</p>
               </div>
               <div className="mt-4 flex gap-5">
-                  <button className="w-48 py-2 text-base font-medium border border-gray-800 text-gray-800 rounded-md hover:border-[#2B308B] hover:text-[#2B308B] ">
-                    Mua ngay
-                  </button>
-                  <button className="w-48 py-2 text-base font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
-                    Thêm vào giỏ hàng
-                  </button>
+                  <Link to='/cart-information'>
+                    <button className="w-48 py-2 text-base font-medium border border-gray-800 text-gray-800 rounded-md hover:border-[#2B308B] hover:text-[#2B308B] ">
+                      Mua ngay
+                    </button>
+                  </Link>
+                  <Link to='/cart-information'>
+                    <button className="w-48 py-2 text-base font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
+                      Thêm vào giỏ hàng
+                    </button>
+                  </Link>
               </div>
           </div>
 
