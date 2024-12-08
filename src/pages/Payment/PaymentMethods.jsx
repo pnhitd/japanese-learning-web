@@ -7,10 +7,7 @@ import {
   AiOutlineUser,
   AiOutlineCheckCircle,
 } from "react-icons/ai";
-import {
-  RiBankFill,
-  RiVisaLine,
-} from "react-icons/ri";
+import { RiBankFill, RiVisaLine } from "react-icons/ri";
 import { FaAddressCard } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import momo from "../../assets/banks/momo.png";
@@ -53,13 +50,12 @@ const PaymentMethods = () => {
       </div>
 
       <Link className="flex items-center mb-6" to="/cart-information">
-      <AiOutlineArrowLeft className="mr-2 text-[#5A81FA]" />
-            <p className="font-semibold text-lg ml-2 text-[#5A81FA]">
-              Quay lại
-            </p>
+        <AiOutlineArrowLeft className="mr-2 text-[#5A81FA]" />
+        <p className="font-semibold text-lg ml-2 text-[#5A81FA]">Quay lại</p>
       </Link>
 
-      <div className="flex">
+      <div className="flex relative">
+        <div className="absolute -top-2 w-[10%] ml-[200px] h-2 bg-orange-500 rounded-t-lg"></div>
         <div className="w-[30%] bg-[#E8EBFF] p-6 rounded-xl shadow-md ml-20 mr-40 max-h-[450px]">
           <h2 className="text-2xl font-bold mb-5">Thông tin đơn hàng</h2>
           <div className="text-gray-600 text-sm mb-2">
@@ -79,8 +75,10 @@ const PaymentMethods = () => {
               <li className="text-xl text-[#000000]">Khóa học JLPT N4</li>
             </ul>
           </div>
-          <div className="mt-8 mb-2">
+          <div className="mt-8 mb-2 relative">
+            <div className="absolute -left-9 top-0 transform -translate-y-1/2 w-7 h-7 bg-[#f5f5f5] border border-[#f5f5f5] rounded-full"></div>
             <div className="border-t-2 border-dashed border-[#7C87AA] flex-1 mb-3"></div>
+            <div className="absolute -right-9 top-0 transform -translate-y-1/2 w-7 h-7 bg-[#f5f5f5] border border-[#f5f5f5] rounded-full"></div>
             <p className="text-[#677489] font-base mb-3">
               Tổng số tiền phải thanh toán
             </p>
@@ -131,86 +129,87 @@ const PaymentMethods = () => {
                   : "bg-white text-black border-[#E0E0E0] shadow-md"
               }`}
             >
-              <HiDotsHorizontal className="mb-6 mx-1" /> 
+              <HiDotsHorizontal className="mb-6 mx-1" />
             </button>
           </div>
 
           {paymentMethod === "creditCard" && (
             <div>
-            <Form layout="vertical" className="text-[#4F5B76]">
-              <Form.Item
-                className="w-full text-blue-500"
-                label={
-                  <span className="text-[#4F5B76] font-semibold">Số thẻ</span>
-                }
-                style={{ marginBottom: 8 }}
-              >
-                <Input className="max-w-[400px]" placeholder="1234 1234 1234 1234" />
-              </Form.Item>
-              <div className="flex space-x-4">
+              <Form layout="vertical" className="text-[#4F5B76]">
                 <Form.Item
+                  className="w-full text-blue-500"
                   label={
-                    <span className="text-[#4F5B76] font-semibold">
-                      Ngày hết hạn
-                    </span>
+                    <span className="text-[#4F5B76] font-semibold">Số thẻ</span>
                   }
-                  
                   style={{ marginBottom: 8 }}
                 >
-                  <Input className="w-[192px]" placeholder="MM / YY" />
+                  <Input
+                    className="max-w-[400px]"
+                    placeholder="1234 1234 1234 1234"
+                  />
                 </Form.Item>
-                <Form.Item
-                  label={
-                    <span className="text-[#4F5B76] font-semibold">CVC</span>
-                  }
-                  
-                  style={{ marginBottom: 8 }}
-                >
-                  <Input className="w-[192px]" placeholder="CVC" />
-                </Form.Item>
-              </div>
-              <div className="flex space-x-4">
-                <Form.Item
-                  label={
-                    <span className="text-[#4F5B76] font-semibold">
-                      Quốc gia
-                    </span>
-                  }
-                  className="w-[192px]"
-                >
-                  <Select placeholder="Chọn quốc gia">
-                    <Option value="vietnam">Việt Nam</Option>
-                    <Option value="usa">Hoa Kỳ</Option>
-                    <Option value="japan">Nhật Bản</Option>
-                    <Option value="korea">Hàn Quốc</Option>
-                    <Option value="australia">Úc</Option>
-                  </Select>
-                </Form.Item>
-                <Form.Item
-                  label={
-                    <span className="text-[#4F5B76] font-semibold">
-                      Mã khu vực
-                    </span>
-                  }
-                  className="w-[192px]"
-                >
-                  <Input placeholder="90210" />
-                </Form.Item>
-              </div>
-            </Form>
+                <div className="flex space-x-4">
+                  <Form.Item
+                    label={
+                      <span className="text-[#4F5B76] font-semibold">
+                        Ngày hết hạn
+                      </span>
+                    }
+                    style={{ marginBottom: 8 }}
+                  >
+                    <Input className="w-[192px]" placeholder="MM / YY" />
+                  </Form.Item>
+                  <Form.Item
+                    label={
+                      <span className="text-[#4F5B76] font-semibold">CVC</span>
+                    }
+                    style={{ marginBottom: 8 }}
+                  >
+                    <Input className="w-[192px]" placeholder="CVC" />
+                  </Form.Item>
+                </div>
+                <div className="flex space-x-4">
+                  <Form.Item
+                    label={
+                      <span className="text-[#4F5B76] font-semibold">
+                        Quốc gia
+                      </span>
+                    }
+                    className="w-[192px]"
+                  >
+                    <Select placeholder="Chọn quốc gia">
+                      <Option value="vietnam">Việt Nam</Option>
+                      <Option value="usa">Hoa Kỳ</Option>
+                      <Option value="japan">Nhật Bản</Option>
+                      <Option value="korea">Hàn Quốc</Option>
+                      <Option value="australia">Úc</Option>
+                    </Select>
+                  </Form.Item>
+                  <Form.Item
+                    label={
+                      <span className="text-[#4F5B76] font-semibold">
+                        Mã khu vực
+                      </span>
+                    }
+                    className="w-[192px]"
+                  >
+                    <Input placeholder="90210" />
+                  </Form.Item>
+                </div>
+              </Form>
 
-            <div className="flex justify-end">
-            <Link to="/cart-information/paid-finish">
-              <Button
-                key="buy"
-                type="primary"
-                className="text-base font-semibold rounded-md bg-[#2B308B] p-5 mt-1 mr-24"
-              >
-                Thanh toán &rarr;
-              </Button>
-            </Link>
-          </div>
-          </div>
+              <div className="flex justify-end">
+                <Link to="/cart-information/paid-finish">
+                  <Button
+                    key="buy"
+                    type="primary"
+                    className="text-base font-semibold rounded-md bg-[#2B308B] p-5 mt-1 mr-24"
+                  >
+                    Thanh toán &rarr;
+                  </Button>
+                </Link>
+              </div>
+            </div>
           )}
 
           {paymentMethod === "bank" && (
@@ -232,7 +231,10 @@ const PaymentMethods = () => {
                   }
                   style={{ marginBottom: 16 }}
                 >
-                  <Input className="w-[400px]" placeholder="1234 1234 1234 1234" />
+                  <Input
+                    className="w-[400px]"
+                    placeholder="1234 1234 1234 1234"
+                  />
                 </Form.Item>
               </Form>
               <p className="text-[#4F5B76] font-semibold mb-3">Ngân hàng</p>
@@ -276,31 +278,42 @@ const PaymentMethods = () => {
               </div>
 
               <div className="flex justify-end">
-            <Link to="/cart-information/paid-finish">
-              <Button
-                key="buy"
-                type="primary"
-                className="text-base font-semibold rounded-md bg-[#2B308B] p-5 mt-1 mr-24"
-              >
-                Thanh toán &rarr;
-              </Button>
-            </Link>
-          </div>
-
+                <Link to="/cart-information/paid-finish">
+                  <Button
+                    key="buy"
+                    type="primary"
+                    className="text-base font-semibold rounded-md bg-[#2B308B] p-5 mt-1 mr-24"
+                  >
+                    Thanh toán &rarr;
+                  </Button>
+                </Link>
+              </div>
             </div>
           )}
 
           {paymentMethod === "momo" && (
             <div className="mb-[20px]">
-              <p className="text-[#4F5B76] font-semibold mb-4 mt-6">Người nhận: SAKURA Japanese</p>
+              <p className="text-[#4F5B76] font-semibold mb-4 mt-6">
+                Người nhận: SAKURA Japanese
+              </p>
               <div className="bg-[#BECEFF] p-6 rounded-xl shadow-md max-w-[290px] ml-[60px]">
-                <p className="text-[#2B308B] font-semibold ml-[25px] mt-[-10px] mb-[10px]">Quét mã QR để thanh toán</p>
+                <p className="text-[#2B308B] font-semibold ml-[25px] mt-[-10px] mb-[10px]">
+                  Quét mã QR để thanh toán
+                </p>
                 <img className="m-auto mb-[10px]" src={qrcode} />
-                <p className="text-[#2B308B] text-center text-sm mb-[10px] ml-[-5px]">Sử dụng <span className="font-bold">App Momo</span> hoặc các ứng dụng hỗ trợ QR code để quét mã</p>
-                <p className="text-[#2B308B] text-center text-xs ">Khó khăn khi thanh toán? <span className="font-bold text-[#5A81FA]">Xem hướng dẫn</span></p>
+                <p className="text-[#2B308B] text-center text-sm mb-[10px] ml-[-5px]">
+                  Sử dụng <span className="font-bold">App Momo</span> hoặc các
+                  ứng dụng hỗ trợ QR code để quét mã
+                </p>
+                <p className="text-[#2B308B] text-center text-xs ">
+                  Khó khăn khi thanh toán?{" "}
+                  <span className="font-bold text-[#5A81FA]">
+                    Xem hướng dẫn
+                  </span>
+                </p>
               </div>
             </div>
-                )}
+          )}
 
           <div className="flex items-center text-[#2B308B] mt-4">
             <FaAddressCard className="text-5xl mr-3" />
