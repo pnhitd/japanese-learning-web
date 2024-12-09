@@ -1,8 +1,8 @@
-import i1 from "../assets/heroImgs/1.jpg";
-import i2 from "../assets/heroImgs/2.jpg";
-import i3 from "../assets/heroImgs/3.jpg";
-import i4 from "../assets/heroImgs/4.jpg";
-import i5 from "../assets/heroImgs/5.jpg";
+import i1 from "../assets/heroImgs/1.png";
+import i2 from "../assets/heroImgs/2.png";
+import i3 from "../assets/heroImgs/3.png";
+import i4 from "../assets/heroImgs/4.png";
+import i5 from "../assets/heroImgs/5.png";
 
 const heroImgsData = [
   {
