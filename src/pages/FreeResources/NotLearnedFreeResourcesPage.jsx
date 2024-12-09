@@ -73,9 +73,9 @@ const NotLearnedFreeResourcesPage = ({ filter = "in progress" }) => {
       </div>
 
       <div className='text-center bg-[#F8F9FD] py-10'>
-        <h1 className='font-bold text-[45px]'>Cảm nghĩ của học sinh về tài liệu miễn phí</h1>
+        <h1 className='font-bold text-[45px]'>Cảm nghĩ của học viên về tài liệu miễn phí</h1>
         <p className='text-[20px] font-semibold'>
-          Hãy tìm hiểu cảm nhận của các học viên về khóa học của Sakura
+          Hãy tìm hiểu cảm nhận của các học viên về tài liệu của Sakura Japanese
         </p>
         <Comments />
       </div>
