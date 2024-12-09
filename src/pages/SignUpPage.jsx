@@ -15,12 +15,12 @@ const SignUpPage = () => {
     navigate('/login');  
   }
   return (
-    <div className=' flex flex-row w-screen h-screen border-2 border-red-500  '  >
-        <div className='flex basis-1/2 flex-col justify-center items-center border-4 border-blue-500'>   
-            <img className='w-auto h-[80%] border-2 border-pink-500 ' src={signupLogo} alt="Login Logo" />
+    <div className=' flex flex-row w-screen h-screen '  >
+        <div className='flex basis-1/2 flex-col justify-center items-center border-blue-500'>   
+            <img className='w-auto h-[80%] border-2' src={signupLogo} alt="Login Logo" />
         </div>
-        <div className='flex basis-1/2 flex-col justify-center items-center border-2 border-red-500'>
-            <div className='flex flex-col justify-center gap-5 w-3/5 h-auto items-center border-2 border-red-500'>
+        <div className='flex basis-1/2 flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center gap-5 w-3/5 h-auto items-center'>
                 <h1 className='text-3xl text-[#2B308B] font-bold mb-5 ' >Đăng ký</h1>
                 <Input className='h-12'  placeholder="Họ và tên" />
                 <Input className='h-12'  placeholder="Email" />
@@ -34,7 +34,7 @@ const SignUpPage = () => {
                     placeholder="Xác nhận mật khẩu"
                     iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                 />
-                <div className='flex flex-row w-[100%] justify-between items-center border-2 border-red-500'>
+                <div className='flex flex-row w-[100%] justify-between items-center'>
                 <ConfigProvider
                             theme={{
                               components: {
