@@ -13,18 +13,12 @@ const OnlineCourses = ({ filter = "all" }) => {
       });
 
   return (
-    <div className="grid grid-cols-5 gap-6">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
       {filteredCourses.map((course, index) => (
         <motion.div
         className="w-[260px] h-[327px] bg-white rounded-3xl shadow-lg overflow-hidden"
           whileHover={{
             scale: 1.05, // Tăng kích thước phần tử
-            boxShadow:  `
-            10px 10px 10px -5px #F490AF,  /* Đổ bóng xuống dưới phải */
-            -10px 10px 10px -5px #F490AF, /* Đổ bóng xuống dưới trái */
-            10px -10px 10px -5px #F490AF, /* Đổ bóng lên trên phải */
-            -10px -10px 10px -5px #F490AF /* Đổ bóng lên trên trái */
-          `,
             transition: {
               duration: 0.2, // Hiệu ứng mượt
               ease: "easeOut",

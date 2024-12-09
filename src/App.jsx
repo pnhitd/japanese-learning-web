@@ -32,7 +32,9 @@ import CartInformationPage from "./pages/Payment/CartInformationPage";
 import PaymentMethods from "./pages/Payment/PaymentMethods";
 import PaidFinishPage from "./pages/Payment/PaidFinishPage";
 import SettingsPage from "./pages/SettingsPage";
-import LearnedResourcesPage from "./pages/FreeResources/LearnedResourcesPage";
+import InProgressFreeResourcesPage from "./pages/FreeResources/InProgressFreeResourcesPage";
+import CompletedFreeResourcesPage from "./pages/FreeResources/CompletedFreeResourcesPage";
+import NotLearnedFreeResourcesPage from "./pages/FreeResources/NotLearnedFreeResourcesPage";
 import FilterFreeResourcesPage from "./pages/FreeResources/FilterFreeResourcesPage";
 import SavedAccountPage from "./pages/AccountManagement/SavedAccountPage";
 import MyResourcesPage from "./pages/AccountManagement/MyResources/MyResourcesPage";
@@ -64,7 +66,9 @@ function App() {
 
   // Tạo một mảng cho các route liên quan đến tài liệu miễn phí
   const freeResourcesRoutes = [
-    { path: "learned", element: <LearnedResourcesPage /> },
+    { path: "in-progress", element: <InProgressFreeResourcesPage /> },
+    { path: "completed", element: <CompletedFreeResourcesPage /> },
+    { path: "not-learned", element: <NotLearnedFreeResourcesPage /> },
     { path: "filter", element: <FilterFreeResourcesPage /> },
     { path: "main-vocab", element: <MainVocabPage /> },
     { path: "main-grammar", element: <MainGrammarPage /> },

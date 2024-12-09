@@ -17,7 +17,7 @@ const contentStyle = {
   borderRadius: '10px'
 };
 
-const FreeResourcesPage = ({ filter = "all" }) => {
+const InProgressFreeResourcesPage = ({ filter = "in progress" }) => {
   const [size, setSize] = useState('large');
 
   return (
@@ -33,7 +33,7 @@ const FreeResourcesPage = ({ filter = "all" }) => {
 
       <div className='mx-10 mt-6'>
         <Link to='/free-resources'>
-          <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
+          <Button className='text-[16x]'  shape="round" size={size}>
             Tất cả tài liệu
           </Button>
         </Link>
@@ -43,7 +43,7 @@ const FreeResourcesPage = ({ filter = "all" }) => {
           </Button>
         </Link>
         <Link to='/free-resources/in-progress'>
-          <Button className='ml-2 text-[16px]' shape="round" size={size}>
+          <Button className='ml-2 text-[16px] font-semibold'  type="primary" shape="round" size={size}>
             Tài liệu đang học
           </Button>
         </Link>
@@ -69,7 +69,7 @@ const FreeResourcesPage = ({ filter = "all" }) => {
         </p>
       </div>
       <div className='mx-10'>
-        <Courses filter="all" />
+        <Courses filter="in-progress" />
       </div>
 
       <div className='text-center bg-[#F8F9FD] py-10'>
@@ -84,4 +84,4 @@ const FreeResourcesPage = ({ filter = "all" }) => {
   )
 }
 
-export default FreeResourcesPage
+export default InProgressFreeResourcesPage
