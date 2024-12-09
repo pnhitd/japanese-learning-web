@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Carousel, Button, Flex } from "antd";
 import heroImgsData from "../data/heroImgsData";
-import { Link } from "react-router-dom";
 import i6 from "../assets/heroImgs/6.png";
 import i7 from "../assets/heroImgs/7.png";
 import i8 from "../assets/heroImgs/8.png";
