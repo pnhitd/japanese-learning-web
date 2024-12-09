@@ -17,7 +17,7 @@ const contentStyle = {
   borderRadius: '10px'
 };
 
-const LearnedOnlineCoursesPage = () => {
+const BoughtOnlineCoursesPage = () => {
   const [size, setSize] = useState('large');
 
   return (
@@ -33,12 +33,12 @@ const LearnedOnlineCoursesPage = () => {
 
       <div className='mx-10 mt-6'>
         <Link to='/online-courses'>
-          <Button className='text-[16x] font-semibold'  shape="round" size={size}>
+          <Button className='text-[16x]'  shape="round" size={size}>
             Tất cả khóa học
           </Button>
         </Link>
-        <Link to='/online-courses/learned'>
-          <Button className='ml-2 text-[16px]' type="primary" shape="round" size={size}>
+        <Link to='/online-courses/bought'>
+          <Button className='ml-2 text-[16px] font-semibold' type="primary" shape="round" size={size}>
             Khóa học đã mua
           </Button>
         </Link>
@@ -74,4 +74,4 @@ const LearnedOnlineCoursesPage = () => {
   )
 }
 
-export default LearnedOnlineCoursesPage
+export default BoughtOnlineCoursesPage

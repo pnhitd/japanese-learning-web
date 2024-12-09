@@ -18,7 +18,7 @@ const contentStyle = {
   borderRadius: "10px",
 };
 
-const PaidResourcesPage = () => {
+const NotLearnedPaidResourcesPage = () => {
   const [size, setSize] = useState("large");
 
   return (
@@ -34,7 +34,7 @@ const PaidResourcesPage = () => {
 
      <div className='mx-10 mt-6'>
         <Link to='/paid-resources'>
-          <Button className='text-[16x] font-semibold' type="primary" shape="round" size={size}>
+          <Button className='text-[16x]' shape="round" size={size}>
             Tất cả tài liệu
           </Button>
         </Link>
@@ -49,7 +49,7 @@ const PaidResourcesPage = () => {
           </Button>
         </Link>
         <Link to='/paid-resources/not-learned'>
-          <Button className='ml-2 text-[16px]' shape="round" size={size}>
+          <Button className='ml-2 text-[16px] font-semibold'  type="primary" shape="round" size={size}>
             Tài liệu chưa học
           </Button>
         </Link>
@@ -72,7 +72,7 @@ const PaidResourcesPage = () => {
         </p>
       </div>
       <div className="mx-10">
-        <PaidCourses filter="all" />
+        <PaidCourses filter="not-learned" />
       </div>
 
       <div className="text-center bg-[#F8F9FD] py-10">
@@ -88,4 +88,4 @@ const PaidResourcesPage = () => {
   );
 };
 
-export default PaidResourcesPage;
+export default NotLearnedPaidResourcesPage;

@@ -42,7 +42,7 @@ const FreeResourcesPage = () => {
             Tất cả khóa học
           </Button>
         </Link>
-        <Link to="/online-courses/learned">
+        <Link to="/online-courses/bought">
           <Button className="ml-2 text-[16px]" shape="round" size={size}>
             Khóa học đã mua
           </Button>

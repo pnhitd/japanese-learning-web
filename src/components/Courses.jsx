@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, Button } from "antd";
 import coursesData from "../data/coursesData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -113,7 +112,7 @@ const Courses = ({ filter = "all" }) => {
                 <>
                   <Link to="/online-courses/infor" className="w-full">
                     <button className="flex-1 py-2 w-full text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
-                      Xem chi tiết
+                      Tiếp tục học
                     </button>
                   </Link>
                 </>

@@ -10,10 +10,12 @@ import ChattingPage from "./pages/ChattingPage";
 import HomePage from "./pages/HomePage";
 import FreeResourcesPage from "./pages/FreeResources/FreeResourcesPage";
 import PaidResourcesPage from "./pages/PaidResources/PaidResourcesPage";
-import LearnedPaidResourcesPage from "./pages/PaidResources/LearnedPaidResourcesPage";
+import NotLearnedPaidResourcesPage from "./pages/PaidResources/NotLearnedPaidResourcesPage";
+import CompletedPaidResourcesPage from "./pages/PaidResources/CompletedPaidResourcesPage";
+import InProgressPaidResourcesPage from "./pages/PaidResources/InProgressPaidResourcesPage";
 import FilterPaidResourcesPage from "./pages/PaidResources/FilterPaidResourcesPage";
 import OnlineCoursesPage from "./pages/OnlineCoursesPage/OnlineCoursesPage";
-import LearnedOnlineCoursesPage from "./pages/OnlineCoursesPage/LearnedOnlineCoursesPage";
+import BoughtOnlineCoursesPage from "./pages/OnlineCoursesPage/BoughtOnlineCoursesPage";
 import FilterOnlineCoursesPage from "./pages/OnlineCoursesPage/FilterOnlineCoursesPage";
 import MainInforOnlineCousePage from "./pages/OnlineCoursesPage/MainInforOnlineCousePage";
 import MainPathStudyOnlineCoursesPage from "./pages/OnlineCoursesPage/MainPathStudyOnlineCoursesPage";
@@ -78,7 +80,7 @@ function App() {
 
   // Tạo một mảng cho các route liên quan đến tài liệu online
   const onlineResourcesRoutes = [
-    { path: "learned", element: <LearnedOnlineCoursesPage /> },
+    { path: "bought", element: <BoughtOnlineCoursesPage /> },
     { path: "filter", element: <FilterOnlineCoursesPage /> },
     { path: "infor", element: <MainInforOnlineCousePage /> },
     { path: "study-path", element: <MainPathStudyOnlineCoursesPage /> },
@@ -88,7 +90,9 @@ function App() {
 
   // Tạo một mảng cho các route liên quan đến tài liệu trả phí
   const paidResourcesRoutes = [
-    { path: "learned", element: <LearnedPaidResourcesPage /> },
+    { path: "not-learned", element: <NotLearnedPaidResourcesPage /> },
+    { path: "completed", element: <CompletedPaidResourcesPage /> },
+    { path: "in-progress", element: <InProgressPaidResourcesPage /> },
     { path: "filter", element: <FilterPaidResourcesPage /> },
     { path: "main-vocab-paid", element: <MainVocabPaidPage /> },
     { path: "main-grammar-paid", element: <MainGrammarPaidPage /> },

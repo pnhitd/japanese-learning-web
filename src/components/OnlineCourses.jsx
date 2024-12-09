@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, Button } from "antd";
 import onlineCourseData from "../data/onlineCourseData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
