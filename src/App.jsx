@@ -24,6 +24,7 @@ import MainCommitOnlineCoursesPage from "./pages/OnlineCoursesPage/MainCommitOnl
 import MainBlogPage from "./pages/Blogs/MainBlogPage";
 import AccountPage from "./pages/AccountManagement/AccountPage";
 import MainVocabPage from "./pages/FreeResources/MainVocabPage";
+import VocabPage from "./pages/FreeResources/VocabPage";
 import MainGrammarPage from "./pages/FreeResources/MainGrammarPage";
 import MainVocabPaidPage from "./pages/PaidResources/MainVocabPaidPage";
 import MainGrammarPaidPage from "./pages/PaidResources/MainGrammarPaidPage";
@@ -76,6 +77,7 @@ function App() {
     { path: "main-listening", element: <MainGrammarPage /> },
     { path: "main-reading", element: <MainGrammarPage /> },
     { path: "main-kanji", element: <MainGrammarPage /> },
+    { path: "vocab", element: <VocabPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến tài liệu online
