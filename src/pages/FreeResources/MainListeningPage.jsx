@@ -37,9 +37,11 @@ const MainListeningPage = () => {
             </p>
           </div>
           <Flex className="justify-end mt-4 mb-10" gap="small" wrap>
-            <Button className="rounded-2xl px-8" type="primary">
-              <p className="font-semibold">Học</p>
-            </Button>
+          <Link to="/free-resources/vocab">
+              <Button className="rounded-2xl px-8" type="primary">
+                <p className="font-semibold">Học</p>
+              </Button>
+          </Link>
             <Button className="rounded-2xl px-8">
               <p className="font-semibold">PDF</p>
               <IoMdDownload className="w-3 h-3" />

@@ -94,7 +94,7 @@ const Courses = ({ filter = "all" }) => {
               {/* Kiểm tra status */}
               {course.status === "completed" ? (
                 <>
-                  <Link to='/online-courses/infor' className="w-full">
+                  <Link to='/free-resources/main-vocab' className="w-full">
                       <button className="flex-1 py-2 w-full font-bold  text-sm  bg-[#F490AF] text-white rounded-md hover:bg-[#FF0854]">
                         Học lại
                       </button>
@@ -102,7 +102,7 @@ const Courses = ({ filter = "all" }) => {
                 </>
               ) : course.status === "not-learned" ? (
                 <>
-                  <Link to="/online-courses/infor" className="w-full">
+                  <Link to="/free-resources/main-vocab" className="w-full">
                     <button className="flex-1 py-2 w-full text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
                       Bắt đầu học
                     </button>
@@ -110,7 +110,7 @@ const Courses = ({ filter = "all" }) => {
                 </>
               ) : course.status === "in-progress" ? (
                 <>
-                  <Link to="/online-courses/infor" className="w-full">
+                  <Link to="vocab" className="w-full">
                     <button className="flex-1 py-2 w-full text-sm font-medium bg-[#2B308B] text-white rounded-md hover:bg-blue-700">
                       Tiếp tục học
                     </button>

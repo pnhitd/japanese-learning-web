@@ -56,7 +56,7 @@ const FreeResourcesPage = () => {
           />
         </Link>
         <Input
-          className="ml-2 rounded-3xl w-[68%] py-2 text-[16px]"
+          className="ml-2 rounded-3xl w-[1035px] py-2 text-[16px]"
           shape="round"
           placeholder="Tìm kiếm...."
           prefix={<SearchOutlined />}

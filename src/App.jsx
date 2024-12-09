@@ -4,6 +4,9 @@ import MainLayout from "./layouts/MainLayout";
 import DashboardPage from "./pages/DashboardPage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import ForgotPasswordOtpPage from "./pages/FogotPasswordOtpPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 import SearchingPage from "./pages/Searching/SearchingPage";
 import SearchingVocab from "./pages/Searching/SearchingVocab";
 import ChattingPage from "./pages/ChattingPage";
@@ -146,6 +149,9 @@ function App() {
       />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/forgot" element={<ForgotPasswordPage />} />
+      <Route path="/forgotOTP" element={<ForgotPasswordOtpPage />} />
+      <Route path="/resetPassword" element={<ResetPasswordPage />} />
 
       {/* Render các route chính */}
       {mainRoutes.map((route, index) => (
