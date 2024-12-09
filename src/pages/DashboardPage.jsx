@@ -9,7 +9,6 @@ import { CiHeart, CiCirclePlus } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { MdNavigateNext } from "react-icons/md";
-import SuggestCourses from "../components/SuggestCourses";
 
 const Dashboard = () => {
   return (
@@ -354,10 +353,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="mt-10 mx-20">
-        <p className="font-semibold text-xl mb-4">Khóa học của bạn</p>
-        <SuggestCourses />
-      </div>
+      
     </div>
   );
 };
