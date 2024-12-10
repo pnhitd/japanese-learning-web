@@ -353,7 +353,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 px-12 border-2 border-red-600">
+      <div className="mt-10 px-12">
         <p className="font-semibold text-xl mb-4">Khóa học của bạn</p>
         <Courses filter="in-progress" />
       </div> 
