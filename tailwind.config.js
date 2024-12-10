@@ -8,6 +8,8 @@ export default {
         gv: "url('/src/assets/gv1.jpg')",
       },
     },
-    plugins: [],
+    plugins: [
+      require('tailwind-scrollbar'),
+    ],
   },
 };

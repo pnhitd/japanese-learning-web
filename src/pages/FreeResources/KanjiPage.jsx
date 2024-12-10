@@ -7,8 +7,8 @@ import { Carousel, Button, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { CiFilter } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import VocabList from "../../components/VocabList";
-import vocabData from "../../data/vocabData";
+import KanjiList from "../../components/KanjiList";
+import kanjiData from "../../data/kanjiData";
 
 const contentStyle = {
   height: "100%",
@@ -19,7 +19,7 @@ const contentStyle = {
   borderRadius: "10px",
 };
 
-const VocabPage = ({ filter = "in progress" }) => {
+const KanjiPage = ({ filter = "in progress" }) => {
   const [size, setSize] = useState("large");
 
   return (
@@ -35,17 +35,17 @@ const VocabPage = ({ filter = "in progress" }) => {
 
       <div className="mx-10 mt-6">
         <Link to="/free-resources/vocab">
-          <Button
-            className="text-[16x] font-semibold"
-            type="primary"
-            shape="round"
-            size={size}
-          >
+          <Button className="text-[16x]" shape="round" size={size}>
             Từ vựng
           </Button>
         </Link>
         <Link to="/free-resources/kanji">
-          <Button className="ml-2 text-[16px]" shape="round" size={size}>
+          <Button
+            className="ml-2 text-[16px] font-semibold"
+            type="primary"
+            shape="round"
+            size={size}
+          >
             Kanji
           </Button>
         </Link>
@@ -76,10 +76,10 @@ const VocabPage = ({ filter = "in progress" }) => {
       </div>
 
       <div className="mt-4 mx-10 mb-10">
-        <VocabList vocabularyData={vocabData} />
+        <KanjiList kanjiData={kanjiData} />
       </div>
     </div>
   );
 };
 
-export default VocabPage;
+export default KanjiPage;

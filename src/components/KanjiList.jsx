@@ -5,16 +5,16 @@ import { FaHeart } from "react-icons/fa";
 import { FaRegArrowAltCircleUp } from "react-icons/fa";
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
-const VocabularyCard = ({ word, furigana, img, type, examples }) => (
+const KanjiCard = ({ kanji, furigana, img, type, examples }) => (
   <div className="w-[790px] h-[440px] bg-white shadow-lg rounded-3xl p-5">
     <div className="flex justify-between">
       <div className="p-4 basis-2/3 ">
         <div className="flex">
-          <p className="font-semibold text-[#2B308B] text-5xl">{word}</p>
+          <p className="font-semibold text-[#2B308B] text-5xl">{kanji}</p>
           <HiOutlineSpeakerWave className="w-6 h-6 my-auto ml-4" />
         </div>
         <p className="mt-2 text-lg">{furigana}</p>
-        <p className="bg-[#3E8B2B] text-white text-center font-semibold  rounded-md px-2 py-1 mt-2 max-w-[125px]">
+        <p className="bg-[#3E8B2B] text-white  rounded-md px-2 text-center font-semibold py-1 mt-2 w-24">
           {type}
         </p>
       </div>
@@ -40,7 +40,7 @@ const VocabularyCard = ({ word, furigana, img, type, examples }) => (
   </div>
 );
 
-const VocabList = ({ vocabularyData }) => {
+const KanjiList = ({ kanjiData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
@@ -49,14 +49,14 @@ const VocabList = ({ vocabularyData }) => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex < vocabularyData.length - 1 ? prevIndex + 1 : prevIndex
+      prevIndex < kanjiData.length - 1 ? prevIndex + 1 : prevIndex
     );
   };
 
   return (
     <div className="flex flex-row container px-16">
       <div className="basis-2/3 flex flex-row">
-        <VocabularyCard {...vocabularyData[currentIndex]} />
+        <KanjiCard {...kanjiData[currentIndex]} />
         <div className="flex flex-col ml-5 gap-5 text-6xl justify-center">
           <FaRegArrowAltCircleUp
             onClick={handlePrevious}
@@ -65,7 +65,7 @@ const VocabList = ({ vocabularyData }) => {
           />
           <FaRegArrowAltCircleDown
             onClick={handleNext}
-            disabled={currentIndex === vocabularyData.length - 1}
+            disabled={currentIndex === kanjiData.length - 1}
             className=" text-[#2B308B] cursor-pointer"
           />
         </div>
@@ -75,10 +75,10 @@ const VocabList = ({ vocabularyData }) => {
       <div className="basis-1/3">
         <div className="w-[350px] h-full  bg-[#F2F4FF] rounded-3xl shadow-lg ml-4">
           <div className="p-4 border-b">
-            <h2 className="text-xl font-bold text-center">Danh sách từ vựng</h2>
+            <h2 className="text-xl font-bold text-center">Danh sách kanji</h2>
           </div>
           <div className="p-4 overflow-auto h-[370px] ">
-            {vocabularyData.map((item, index) => (
+            {kanjiData.map((item, index) => (
               <div
                 key={index}
                 onClick={() => setCurrentIndex(index)}
@@ -90,7 +90,7 @@ const VocabList = ({ vocabularyData }) => {
               >
                 <div className="basis-2/3">
                   <p className="font-mono text-xl">
-                    {index + 1}. <span>{item.word}</span>
+                    {index + 1}. <span>{item.kanji}</span>
                   </p>
                   <div className="flex flex-row gap-1 items-center">
                     <p className="text-sm mr-2">Độ thông dụng</p>
@@ -111,4 +111,4 @@ const VocabList = ({ vocabularyData }) => {
   );
 };
 
-export default VocabList;
+export default KanjiList;

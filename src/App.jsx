@@ -28,6 +28,7 @@ import MainBlogPage from "./pages/Blogs/MainBlogPage";
 import AccountPage from "./pages/AccountManagement/AccountPage";
 import MainVocabPage from "./pages/FreeResources/MainVocabPage";
 import VocabPage from "./pages/FreeResources/VocabPage";
+import KanjiPage from "./pages/FreeResources/KanjiPage";
 import MainGrammarPage from "./pages/FreeResources/MainGrammarPage";
 import MainVocabPaidPage from "./pages/PaidResources/MainVocabPaidPage";
 import MainGrammarPaidPage from "./pages/PaidResources/MainGrammarPaidPage";
@@ -81,6 +82,7 @@ function App() {
     { path: "main-reading", element: <MainGrammarPage /> },
     { path: "main-kanji", element: <MainGrammarPage /> },
     { path: "vocab", element: <VocabPage /> },
+    { path: "kanji", element: <KanjiPage /> },
   ];
 
   // Tạo một mảng cho các route liên quan đến tài liệu online
