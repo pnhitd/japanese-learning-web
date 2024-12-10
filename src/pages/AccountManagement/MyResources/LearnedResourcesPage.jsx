@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Courses from '../../../components/Courses'
 import c1 from '../../../assets/carouselImgs/c1.png'
 import c2 from '../../../assets/carouselImgs/c2.png'
 import { Carousel, Button, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import { CiFilter } from "react-icons/ci";
 import { SearchOutlined } from '@ant-design/icons';
+import OnlineCourses from '../../../components/OnlineCourses';
 
 
 const contentStyle = {
@@ -34,19 +34,19 @@ const LearnedAccountPage = () => {
 
             <div className='mx-10 mt-6'>
                 <Link to='/account/my-resources'>
-                    <Button className='text-[16x] font-semibold'shape="round" size={size}>
-                        Tất cả khóa học
+                    <Button className='text-[16x]'shape="round" size={size}>
+                        Tài liệu đang học
                     </Button>
                 </Link>
                 <Link to='/account/my-resources/learned'>
-                    <Button className='ml-2 text-[16px]'  type="primary" shape="round" size={size}>
+                    <Button className='ml-2 text-[16px] font-semibold'  type="primary" shape="round" size={size}>
                         Khóa học đã mua
                     </Button>
                 </Link>
                 <Link to='/account/my-resources/filter'>
                     <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
                 </Link>
-                <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
+                <Input className='ml-2 rounded-3xl w-[72%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
             </div>
 
             <div className='text-center mb-10 mx-10'>
@@ -57,8 +57,8 @@ const LearnedAccountPage = () => {
                     Hãy hoàn thành nốt những bài mà bạn chưa làm nhé!
                 </p>
             </div>
-            <div className='mx-10'>
-                <Courses filter='in-progress' />
+            <div className='mx-10 mb-10'>
+                <OnlineCourses filter='bought' />
             </div>
 
 
