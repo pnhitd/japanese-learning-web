@@ -14,6 +14,11 @@ const adminData = [
     date: "14:45",
     desc: "Dạ nếu có cần thông tin hỗ trợ cứ nhắn em nhé. Em chào anh!",
   },
+  {
+    id: 4,
+    date: "16:13",
+    desc: "Chúc anh báo cáo cuối kỳ IE104 được điểm cao nhé!",
+  },
 ];
 
 const customerData = [
@@ -31,6 +36,11 @@ const customerData = [
     id: 3,
     date: "16:12",
     desc: "À ok cảm ơn bạn nha.",
+  },
+  {
+    id: 4,
+    date: "16:14",
+    desc: "Trùi ui mãi iuu",
   },
 ];
 

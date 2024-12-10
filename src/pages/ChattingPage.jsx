@@ -105,7 +105,7 @@ const ChattingPage = () => {
         </div>
       </div>
 
-      <div className="w-[75%]">
+      <div className="w-[80%] h-full">
         <div>
           <div className="flex justify-between py-2 px-4 bg-[#CEDEFF]">
             <div className="flex my-auto">
@@ -228,12 +228,68 @@ const ChattingPage = () => {
               )}
             </div>
 
-            <div className="flex mt-4">
+            <div>
+              {customerData.map(
+                (item) =>
+                  item.date === "16:12" && (
+                    <div id={item.id} className="mt-2 flex flex-row-reverse">
+                      <p className="bg-[#CEDEFF] py-2 px-3 rounded-tr-2xl rounded-l-2xl">
+                        <p>{item.desc}</p>
+                        <p className="flex flex-row-reverse mt-1">
+                          <span className="text-[#00000073] text-[13px]">
+                            16:12
+                          </span>
+                          <IoCheckmarkDone className="text-[#27AE60] my-auto mr-1" />
+                        </p>
+                      </p>
+                    </div>
+                  )
+              )}
+            </div>
+
+            <div className="flex mt-2 max-w-[600px]">
+              <img src={chat4} alt="" className="w-8 h-8 rounded-full mr-2" />
+              {adminData.map(
+                (item) =>
+                  item.date === "16:13" && (
+                    <p
+                      id={item.id}
+                      className="bg-[#F4F4F7] py-2 px-3 rounded-r-2xl rounded-bl-2xl"
+                    >
+                      <p>{item.desc}</p>
+                      <span className="text-[#00000073] mt-1 text-[13px]">
+                        14:45
+                      </span>
+                    </p>
+                  )
+              )}
+            </div>
+            <div>
+              {customerData.map(
+                (item) =>
+                  item.date === "16:14" && (
+                    <div id={item.id} className="mt-2 flex flex-row-reverse">
+                      <p className="bg-[#CEDEFF] py-2 px-3 rounded-tr-2xl rounded-l-2xl">
+                        <p>{item.desc}</p>
+                        <p className="flex flex-row-reverse mt-1">
+                          <span className="text-[#00000073] text-[13px]">
+                            16:12
+                          </span>
+                          <IoCheckmarkDone className="text-[#27AE60] my-auto mr-1" />
+                        </p>
+                      </p>
+                    </div>
+                  )
+              )}
+            </div>
+
+
+            <div className="flex mt-9">
               <RiAttachment2 className="w-5 h-5 mr-5 flex-none my-auto" />
               <input
                 type="text"
                 placeholder="Nhập tin nhắn ở đây..."
-                className="flex-auto bg-[#FAFAFA] text-[#00000073] px-6 py-4 rounded-2xl border-none border-transparent"
+                className="flex-auto bg-[#F4F4F7] text-[#00000073] px-6 py-4 rounded-2xl focua: outline-none"
               />
               <button className="ml-4 text-[#27AE60] font-semibold">Gửi</button>
             </div>
