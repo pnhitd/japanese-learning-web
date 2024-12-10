@@ -35,9 +35,15 @@ const items = [
 const Header = () => {
   return (
     <div className="flex justify-end mt-4">
-      <ShoppingCartOutlined className="text-2xl mr-4" />
-      <MessageOutlined className="text-xl mr-4" />
-      <NotificationOutlined className="text-xl mr-4" />
+      <Link to='/cart-information'>
+          <ShoppingCartOutlined className="text-2xl mr-4 mt-2" />
+      </Link>
+      <Link to='/chat'>
+          <MessageOutlined className="text-xl mr-4 mt-2" />
+      </Link>
+      <Link to=''>
+          <NotificationOutlined className="text-xl mr-4 mt-2" />
+      </Link>
       <div className="flex pr-10">
         <Dropdown
           menu={{
