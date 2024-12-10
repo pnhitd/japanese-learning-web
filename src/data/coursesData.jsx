@@ -81,7 +81,82 @@ const coursesData = [
         description: 'Phát triển khả năng giao tiếp tự nhiên, phù hợp với các tình huống thực tế từ N5 đến N1.',
         image: FR10,
         status: 'not-learned'
+    },
+    {
+        id: 11,
+        title: 'Ngữ pháp căn bản',
+        description: 'Học các nguyên tắc ngữ pháp cơ bản của tiếng Nhật, giúp bạn nắm vững nền tảng cần thiết.',
+        image: FR1,
+        status: 'completed'
+    },
+    {
+        id: 12,
+        title: 'Luyện viết cơ bản',
+        description: 'Tập viết bảng chữ cái và các câu đơn giản, giúp bạn làm quen với cách viết tiếng Nhật.',
+        image: FR2,
+        status: 'completed'
+    },
+    {
+        id: 13,
+        title: 'Nghe hiểu cơ bản',
+        description: 'Khóa học giúp bạn làm quen với các đoạn hội thoại đơn giản và nghe hiểu hiệu quả.',
+        image: FR3,
+        status: 'completed'
+    },
+    {
+        id: 14,
+        title: 'Từ vựng N4',
+        description: 'Tổng hợp và luyện tập các từ vựng cần thiết cho kỳ thi N4 với ví dụ và bài tập thực hành.',
+        image: FR4,
+        progress: '60',
+        status: 'in-progress'
+    },
+    {
+        id: 15,
+        title: 'Ngữ pháp N4',
+        description: 'Nâng cao khả năng sử dụng ngữ pháp với các bài tập thực tế và ví dụ chi tiết.',
+        image: FR5,
+        progress: '50',
+        status: 'in-progress'
+    },
+    {
+        id: 16,
+        title: 'Học Kanji N4',
+        description: 'Tiếp cận các Kanji cơ bản và trung cấp, giúp bạn đọc hiểu văn bản đơn giản.',
+        image: FR6,
+        progress: '40',
+        status: 'in-progress'
+    },
+    {
+        id: 17,
+        title: 'Luyện nghe N3',
+        description: 'Cải thiện kỹ năng nghe hiểu các đoạn hội thoại và bài phát biểu ở cấp độ N3.',
+        image: FR7,
+        progress: '10',
+        status: 'in-progress'
+    },
+    {
+        id: 18,
+        title: 'Kỹ năng đọc hiểu N3',
+        description: 'Luyện đọc hiểu các đoạn văn có cấu trúc phức tạp hơn và tăng tốc độ xử lý thông tin.',
+        image: FR8,
+        status: 'not-learned'
+    },
+    {
+        id: 19,
+        title: 'Học Kanji N3',
+        description: 'Nâng cao vốn Kanji trung cấp với các mẹo ghi nhớ và bài tập luyện tập.',
+        image: FR9,
+        status: 'not-learned'
+    },
+    {
+        id: 20,
+        title: 'Luyện viết N3',
+        description: 'Phát triển khả năng viết văn bản tiếng Nhật trung cấp, từ thư từ đến bài luận.',
+        image: FR10,
+        status: 'completed'
     }
+    
 ];
 
 export default coursesData;

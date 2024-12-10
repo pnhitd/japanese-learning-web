@@ -9,6 +9,7 @@ import { CiHeart, CiCirclePlus } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { MdNavigateNext } from "react-icons/md";
+import Courses from "../components/Courses";
 
 const Dashboard = () => {
   return (
@@ -32,8 +33,8 @@ const Dashboard = () => {
           />
         </div>
       </div>
-
-      <div className="m-10 flex justify-around">
+       
+      <div className="m-10 flex justify-between">     {/* justify-arround */}
         <div className="m-2">
           <div className="flex justify-between mb-10">
             <p className="font-semibold text-xl">Hoạt động gần đây</p>
@@ -174,7 +175,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex bg-[#F2F4FF] justify-evenly">
+      <div className="flex bg-[#F2F4FF] justify-between px-10">  {/* justify-evenly */}
         <div className="w-[50%] mt-10">
           <div className="flex justify-between text-[25px] font-semibold text-[#12084E]">
             <p className="font-semibold text-xl">Lịch học hôm nay</p>
@@ -352,8 +353,10 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
-      
+      <div className="mt-10 px-12 border-2 border-red-600">
+        <p className="font-semibold text-xl mb-4">Khóa học của bạn</p>
+        <Courses filter="in-progress" />
+      </div> 
     </div>
   );
 };

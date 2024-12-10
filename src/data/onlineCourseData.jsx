@@ -36,21 +36,21 @@ const onlineCourseData = [
         title: 'Ngữ pháp N5',
         description: 'Khóa học giúp bạn nắm chắc những ngữ pháp sẽ xuất hiện tại cấp độ N5.',
         image: OC4,
-        status: 'bought'
+        status: 'not bought'
     },
     {
         id: 5,
         title: 'Viết sakubun',
         description: 'Khóa học giúp bạn có thể viết được đoạn văn ngắn bằng tiếng Nhật',
         image: OC5,
-        status: 'bought'
+        status: 'not bought'
     },
     {
         id: 6,
         title: 'Tiếng Nhật công sở',
         description: 'Khóa học giúp bạn có thể tự tin giao tiếp tại nơi làm việc',
         image: OC6,
-        status: 'not bought'
+        status: 'bought'
     },
     {
         id: 7,
@@ -64,21 +64,21 @@ const onlineCourseData = [
         title: 'Từ vựng N4',
         description: 'Khóa học giúp bạn nắm chắc những từ vựng sẽ xuất hiện tại cấp độ N4.',
         image: OC8,
-        status: 'not bought'
+        status: 'bought'
     },
     {
         id: 9,
         title: 'Chưa có',
         description: 'Khóa học giúp bạn có thể tự tin giao tiếp trong các tình huống hàng ngày.',
         image: OC1,
-        status: 'not bought'
+        status: 'bought'
     },
     {
         id: 10,
         title: 'Chưa có',
         description: 'Khóa học giúp bạn có thể tự tin giao tiếp trong các tình huống hàng ngày.',
         image: OC1,
-        status: 'not bought'
+        status: 'bought'
     },
 ];
 

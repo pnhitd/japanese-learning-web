@@ -59,11 +59,6 @@ const MainScheduleOnlineCoursesPage = () => {
       </div>
 
       <div className="mx-20 my-10">
-        <Link to="/online-courses" className="flex">
-          <IoMdArrowRoundBack className="w-4 h-4 my-auto" />
-          <p className="ml-2">Quay lại</p>
-        </Link>
-
         <div className="text-center font-bold text-3xl leading-[48px]">
           Tiếng Nhật chuyên ngành
           <br />

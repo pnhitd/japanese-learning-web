@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const SuggestCourses = () => {
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
       {coursesData.map((course, index) => (
         <Card
           key={index}
