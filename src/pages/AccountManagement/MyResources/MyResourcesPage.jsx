@@ -58,7 +58,7 @@ const MyResourcesPage = () => {
         </p>
       </div>
       <div className='mx-10'>
-        <Courses />
+        <Courses filter = 'in-progress' />
       </div>
 
 
