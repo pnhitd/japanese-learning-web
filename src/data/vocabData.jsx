@@ -1,6 +1,16 @@
 import VC1 from "../assets/Vocab/VC1.png";
 import VC2 from "../assets/Vocab/VC2.png";
 import VC3 from "../assets/Vocab/VC3.png";
+import VC4 from "../assets/Vocab/VC4.png";
+import VC5 from "../assets/Vocab/VC5.png";
+import VC6 from "../assets/Vocab/VC6.png";
+import VC7 from "../assets/Vocab/VC7.png";
+import VC8 from "../assets/Vocab/VC8.png";
+import VC9 from "../assets/Vocab/VC9.png";
+import VC10 from "../assets/Vocab/VC10.png";
+import VC11 from "../assets/Vocab/VC11.png";
+import VC12 from "../assets/Vocab/VC12.png";
+import VC13 from "../assets/Vocab/VC13.png";
 
 const vocabData = [
   {
@@ -55,7 +65,7 @@ const vocabData = [
     furigana: "のむ [ẨM]",
     type: "Động từ nhóm I",
     stars: 2,
-    img: VC1,
+    img: VC4,
     examples: [
       {
         title: "Uống nước",
@@ -69,7 +79,7 @@ const vocabData = [
     furigana: "きく [VĂN]",
     type: "Động từ nhóm I",
     stars: 3,
-    img: VC2,
+    img: VC5,
     examples: [
       {
         title: "Nghe nhạc",
@@ -83,7 +93,7 @@ const vocabData = [
     furigana: "たべる [THỰC]",
     type: "Động từ nhóm II",
     stars: 1,
-    img: VC3,
+    img: VC6,
     examples: [
       {
         title: "Ăn cơm",
@@ -97,7 +107,7 @@ const vocabData = [
     furigana: "あるく [BỘ]",
     type: "Động từ nhóm I",
     stars: 2,
-    img: VC1,
+    img: VC7,
     examples: [
       {
         title: "Đi bộ",
@@ -111,7 +121,7 @@ const vocabData = [
     furigana: "はしる [TẨU]",
     type: "Động từ nhóm I",
     stars: 3,
-    img: VC2,
+    img: VC8,
     examples: [
       {
         title: "Chạy nhanh",
@@ -125,7 +135,7 @@ const vocabData = [
     furigana: "ねる [TẨM]",
     type: "Động từ nhóm II",
     stars: 1,
-    img: VC3,
+    img: VC9,
     examples: [
       {
         title: "Ngủ sớm",
@@ -139,7 +149,7 @@ const vocabData = [
     furigana: "はなす [THOẠI]",
     type: "Động từ nhóm I",
     stars: 2,
-    img: VC1,
+    img: VC10,
     examples: [
       {
         title: "Nói chuyện",
@@ -153,7 +163,7 @@ const vocabData = [
     furigana: "かう [MÃI]",
     type: "Động từ nhóm I",
     stars: 3,
-    img: VC2,
+    img: VC11,
     examples: [
       {
         title: "Mua đồ",
@@ -167,7 +177,7 @@ const vocabData = [
     furigana: "すむ [TRÚ]",
     type: "Động từ nhóm I",
     stars: 2,
-    img: VC3,
+    img: VC12,
     examples: [
       {
         title: "Sống ở Nhật",
@@ -181,7 +191,7 @@ const vocabData = [
     furigana: "あそぶ [DU]",
     type: "Động từ nhóm I",
     stars: 1,
-    img: VC1,
+    img: VC13,
     examples: [
       {
         title: "Chơi với bạn bè",

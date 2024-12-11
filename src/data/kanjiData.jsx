@@ -1,6 +1,16 @@
 import KJ1 from "../assets/Vocab/VC1.png";
-import KJ2 from "../assets/Vocab/VC1.png";
-import KJ3 from "../assets/Vocab/VC1.png";
+import KJ2 from "../assets/Vocab/VC2.png";
+import KJ3 from "../assets/Vocab/VC3.png";
+import KJ4 from "../assets/Vocab/VC4.png";
+import KJ5 from "../assets/Vocab/VC5.png";
+import KJ6 from "../assets/Vocab/VC6.png";
+import KJ7 from "../assets/Vocab/VC7.png";
+import KJ8 from "../assets/Vocab/VC8.png";
+import KJ9 from "../assets/Vocab/VC9.png";
+import KJ10 from "../assets/Vocab/VC10.png";
+import KJ11 from "../assets/Vocab/VC11.png";
+import KJ12 from "../assets/Vocab/VC12.png";
+import KJ13 from "../assets/Vocab/VC13.png";
 
 const kanjiData = [
   {
@@ -59,7 +69,7 @@ const kanjiData = [
     meaning: "Uống",
     type: "Trình độ N5",
     stars: 2,
-    img: KJ1,
+    img: KJ4,
     examples: [
       {
         title: "Uống nước",
@@ -74,7 +84,7 @@ const kanjiData = [
     meaning: "Nghe",
     type: "Trình độ N5",
     stars: 3,
-    img: KJ2,
+    img: KJ5,
     examples: [
       {
         title: "Nghe nhạc",
@@ -89,7 +99,7 @@ const kanjiData = [
     meaning: "Ăn",
     type: "Trình độ N5",
     stars: 1,
-    img: KJ3,
+    img: KJ6,
     examples: [
       {
         title: "Ăn cơm",
@@ -104,7 +114,7 @@ const kanjiData = [
     meaning: "Đi bộ",
     type: "Trình độ N5",
     stars: 2,
-    img: KJ1,
+    img: KJ7,
     examples: [
       {
         title: "Đi bộ trong công viên",
@@ -119,7 +129,7 @@ const kanjiData = [
     meaning: "Chạy",
     type: "Trình độ N5",
     stars: 3,
-    img: KJ2,
+    img: KJ8,
     examples: [
       {
         title: "Chạy nhanh",
@@ -134,7 +144,7 @@ const kanjiData = [
     meaning: "Ngủ",
     type: "Trình độ N5",
     stars: 1,
-    img: KJ3,
+    img: KJ9,
     examples: [
       {
         title: "Ngủ sớm",
@@ -149,7 +159,7 @@ const kanjiData = [
     meaning: "Nói chuyện",
     type: "Trình độ N5",
     stars: 2,
-    img: KJ1,
+    img: KJ10,
     examples: [
       {
         title: "Nói chuyện với bạn bè",
@@ -164,7 +174,7 @@ const kanjiData = [
     meaning: "Mua",
     type: "Trình độ N5",
     stars: 3,
-    img: KJ2,
+    img: KJ11,
     examples: [
       {
         title: "Mua đồ",
@@ -179,7 +189,7 @@ const kanjiData = [
     meaning: "Sống",
     type: "Trình độ N5",
     stars: 2,
-    img: KJ3,
+    img: KJ12,
     examples: [
       {
         title: "Sống ở Nhật",
@@ -194,7 +204,7 @@ const kanjiData = [
     meaning: "Chơi",
     type: "Trình độ N5",
     stars: 1,
-    img: KJ1,
+    img: KJ13,
     examples: [
       {
         title: "Chơi với bạn bè",
