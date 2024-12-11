@@ -98,7 +98,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
-      <Carousel autoplay>
+      <Carousel autoplay arrows={true}>
         {heroImgsData.map((heroImg) => (
           <div
             key={heroImg.id}

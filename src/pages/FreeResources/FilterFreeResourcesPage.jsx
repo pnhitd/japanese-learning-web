@@ -31,6 +31,7 @@ const FilterFreeResourcesPage = () => {
                     <img style={contentStyle} src={c2} alt="" />
                 </div>
             </Carousel>
+          
 
             <div className='mx-10 mt-6'>
                 <Link to='/free-resources'>
@@ -43,11 +44,21 @@ const FilterFreeResourcesPage = () => {
                         Tài liệu đã học
                     </Button>
                 </Link>
+                <Link to='/free-resources/learning'>
+                    <Button className='ml-2 text-[16px]' shape="round" size={size}>
+                        Tài liệu đang học
+                    </Button>
+                </Link>
+                <Link to='/free-resources/not-learned'>
+                    <Button className='ml-2 text-[16px]' shape="round" size={size}>
+                        Tài liệu chưa học
+                    </Button>
+                </Link>
                 <Link to='/free-resources/filter'>
                     <Button className='ml-2' shape="circle" type="primary" icon={<CiFilter className='text-[16px]' />} size={size} />
                 </Link>
                 <Input className='ml-2 rounded-3xl w-[68%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
-            </div>
+            </div> 
 
             <div className='text-center mb-10 mx-10'>
                 <h1 className='font-bold text-[55px]'>Tài liệu miễn phí</h1>

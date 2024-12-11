@@ -53,7 +53,7 @@ const NotLearnedPaidResourcesPage = () => {
             Tài liệu chưa học
           </Button>
         </Link>
-        <Link to='/free-resources/filter'>
+        <Link to='/paid-resources/filter'>
           <Button className='ml-2' shape="circle" icon={<CiFilter className='text-[16px]' />} size={size} />
         </Link>
         <Input className='ml-2 rounded-3xl w-[52%] py-2 text-[16px]' shape="round" placeholder="Tìm kiếm...." prefix={<SearchOutlined />} />
