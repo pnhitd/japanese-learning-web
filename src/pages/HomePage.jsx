@@ -109,11 +109,11 @@ const HomePage = () => {
               alt=""
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#00000099] flex items-center justify-center">
-              <div className="text-white text-center px-8">
-                <h1 className="text-5xl font-bold">{heroImg.title}</h1>
-                <p className="text-xl mt-4 mx-10 leading-10">{heroImg.desc}</p>
-                <Button className="mt-4" type="primary" onClick={handleClick}>
+            <div className="absolute inset-0 bg-[#00000099] flex items-end ">
+              <div className="text-white px-8 mb-[100px] ">
+                <h1 className="text-5xl font-bold ">{heroImg.title}</h1>
+                <p className="text-xl mt-4 leading-10 text-justify  w-[900px]">{heroImg.desc}</p>
+                <Button className="mt-4 h-10 text-lg font-semibold" type="primary" onClick={handleClick}>
                   Bắt đầu học
                 </Button>
               </div>
@@ -156,6 +156,9 @@ const HomePage = () => {
       <div id="courses" className="mt-10 py-10 bg-[#F2F4FF] px-[300px]">
         <p className="font-bold text-3xl mb-4">Khóa học mới</p>
         <Flex>
+          <div>
+
+
           <div className="bg-white">
             <img src={i6} alt="" className="w-[500px]" />
             <p className="px-10 py-4 font-semibold text-lg">GIAO TIẾP CƠ BẢN</p>
@@ -171,6 +174,23 @@ const HomePage = () => {
               <GrFormNextLink className="w-5 h-5 my-auto" />
             </div>
           </div>
+          <div className="bg-white">
+            <img src={i6} alt="" className="w-[500px]" />
+            <p className="px-10 py-4 font-semibold text-lg">GIAO TIẾP CƠ BẢN</p>
+            <p className="px-10 leading-6">
+              Khóa học giúp bạn có thể tự tin giao tiếp trong các tình huống
+              hàng ngày.
+            </p>
+            <div
+              className="flex mx-10 mt-[115px] hover:text-[#1477f9]"
+              onClick={handleClick}
+            >
+              <p className="font-semibold cursor-pointer">MUA NGAY</p>
+              <GrFormNextLink className="w-5 h-5 my-auto" />
+            </div>
+          </div>
+          </div>
+          
           <div className="ml-4">
             <Flex className="bg-white">
               <div className="mx-10 my-4">
