@@ -13,6 +13,7 @@
     <br />
   </p>
 </div>
+
 ## 📌 概要  
 
 **Sakura Japanese** は、日本語を簡単かつ効果的に学べるオンラインプラットフォームです。  
@@ -50,22 +51,22 @@
 
 5. ブログページで、日本文化やニュースについて知ることができます。
 
-<p align="center">
-  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/Picture.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/2.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/3.png" width="250">
-</p>
+<div align="center">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/Picture.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/2.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/3.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/4.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/5.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/6.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/7.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/8.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/9.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/10.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/11.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/12.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/13.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/14.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/15.png" width="700">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/16.png" width="700">
+</div>
 
-<p align="center">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/8.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/9.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/10.png" width="250">
-</p>
-
-<p align="center">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/11.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/12.png" width="250">
-  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/13.png" width="250">
-</p>
-
-<p align="center">
