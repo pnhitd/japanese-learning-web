@@ -48,4 +48,24 @@
 
 4. 必要に応じて、スタッフとチャットしながら疑問を解決できます。  
 
-5. ブログページで、日本文化やニュースについて知ることができます。  
+5. ブログページで、日本文化やニュースについて知ることができます。
+
+<p align="center">
+  <img src="https://github.com/anhthotn/Sakura_Pictures/blob/main/Picture.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/2.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/3.png" width="250">
+</p>
+
+<p align="center">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/8.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/9.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/10.png" width="250">
+</p>
+
+<p align="center">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/11.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/12.png" width="250">
+  <img src="https://github.com/anhthotn/VaccineApp_Pictures/blob/main/13.png" width="250">
+</p>
+
+<p align="center">
